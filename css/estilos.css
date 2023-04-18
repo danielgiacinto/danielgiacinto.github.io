@@ -153,25 +153,18 @@ html, body{
 }
 .sobremi{
     display: flex;
-    grid-template-columns: repeat(10, 1fr);
-    width: 100vw;
-    align-items: center;
-    display: flex;
+    /*grid-template-columns: repeat(10, 1fr);*/
     width: 100%;
+    align-items: center;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
     scroll-margin-top: 50px ;
 }
 
-.imagen-sobremi img{
-    width: 550px;
-    height: 100%;
-    display: flex;
-}
 .about{
-    text-align: left;
+    text-align: center;
     width: 750px;
-    padding: 3em;
+    padding: 50px;
     margin-top: 50px;
 }
 .about h2{
@@ -409,7 +402,7 @@ html, body{
     display: block;
 }
 .portafolio .galeria .proyecto .overlay{
-    position: absolute;
+    position:absolute;
     top: 0;
     width: 100%;
     height: 100%;
