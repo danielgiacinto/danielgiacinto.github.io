@@ -570,7 +570,7 @@ footer .arriba{
     align-items: center;
 }
 
-@media screen and (max-width:980px){
+@media screen and (max-width:1096px){
     nav{
         display: none;
     }
