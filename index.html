@@ -19,8 +19,8 @@
                 <ul>
                     <li><a href="#inicio" onclick="seleccionar()">Inicio</a></li>
                     <li><a href="#sobremi" onclick="seleccionar()">Sobre Mi</a></li>
-                    <li><a href="#habilidades" onclick="seleccionar()">Habilidades</a></li>
                     <li><a href="#sobremi" onclick="seleccionar()">Curriculum</a></li>
+                    <li><a href="#habilidades" onclick="seleccionar()">Habilidades</a></li>
                     <li><a href="#portafolio" onclick="seleccionar()">Portafolio</a></li>
                     <li><a href="#contacto" onclick="seleccionar()">Contacto</a></li>
                 </ul>
@@ -45,19 +45,16 @@
     </section>
 
     <!--Seccion Sobre Mi-->
-    <section id="sobremi" class="sobremi">
-        <div class="imagen-sobremi">
-            <!--<img src="img/foto pag web.jpg" alt="Daniel">-->
-        </div>
+    <section id="sobremi">
         <div class="about">
-            <h2>Sobre Mi</h2>
-            <div class="linea"></div>
-            <p>Me presento, Soy Daniel José Giacinto, tengo 21 años y vivo en la ciudad de Córdoba, Argentina.</p> 
-            <p>Actualmente soy estudiante avanzado de la Tecnicatura Universitaria en Programación de la Universidad Tecnológica Nacional - Facultad Regional Córdoba.</p> 
-            <p> Me caracterizo por ser una persona responsable, proactiva, paciente, social, y con ganas de aprender nuevas tecnologías.</p>
-            <p>Recientemente termine el curso de FrontEnd Web Developer en el que aprendí HTML, CSS y JavaScript. 
-                Continuaré aprendiendo diferentes tecnologías para poder lograr mis objetivos y desempeñarme de la mejor manera posible.
-            </p>
+            <p class="titulo-sobremi">Sobre Mi</p>
+            <h2>Hola, soy <span>Daniel Jose Giacinto.</span></h2>
+            <h3>Desarrollador Web</h3>
+            <p>Tengo 21 años y vivo en la ciudad de Córdoba, Argentina.
+            Actualmente soy estudiante avanzado de la Tecnicatura Universitaria en Programación de la Universidad Tecnológica Nacional - Facultad Regional Córdoba.</p>
+            <p>Me caracterizo por ser una persona responsable, proactiva, paciente, social, y con ganas de aprender nuevas tecnologías.
+            <p>Recientemente termine el curso de FrontEnd Web Developer en el que aprendí HTML, CSS y JavaScript. </p> 
+            <p>Continuaré aprendiendo diferentes tecnologías para poder lograr mis objetivos y desempeñarme de la mejor manera posible.</p>
             <button onclick="verCv()" class="descargar-cv">Visualizar CV</button>
         </div>
     </section>
@@ -163,7 +160,7 @@
             <div class="galeria">
                 <div class="proyecto">
                     <img src="img/p1.jpg" alt="portafolio">
-                    <a href="" target="_blank" style="text-decoration: none; color: aliceblue;">
+                    <a href="https://github.com/danielgiacinto/CityCarPII" target="_blank" style="text-decoration: none; color: aliceblue;">
                         <div class="overlay">
                             <h3>Aplicacion con Api</h3>
                             <p>C# - SQL - .NET CORE</p>

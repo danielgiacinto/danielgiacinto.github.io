@@ -151,50 +151,67 @@ html, body{
     font-size: 30px;
     color: #52545a;
 }
-.sobremi{
+/*Seccion SOBRE MI*/
+#sobremi{
+    max-width: 100%;
+    margin: auto;
+    padding: 100px 50px;
+    color: #000000;
+    background-color: whitesmoke;
     display: flex;
-    /*grid-template-columns: repeat(10, 1fr);*/
-    width: 100%;
-    align-items: center;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    scroll-margin-top: 50px ;
 }
-
-.about{
-    text-align: center;
-    width: 750px;
-    padding: 50px;
+#sobremi .about{
+    margin: auto;
     margin-top: 50px;
 }
-.about h2{
-    font-size: 48px;
-    color:#ffffff;
+#sobremi .about .titulo-sobremi{
+    font-size: 50px;
+    margin-bottom:50px;
+    text-decoration: underline;
+    text-underline-position: under;
+    text-decoration-color:#aeaeae;
+    text-decoration-thickness: 5px;
 }
-.about p{
-    text-justify: auto;
-    color: whitesmoke;
+#sobremi .about h2{
+    font-size: 34px;
+    font-weight: bold;
+    margin: 20px 0;
+    letter-spacing: 2px;
+}
+#sobremi .about h2 span{
+    color: #a1b616;
+}
+#sobremi .about h3{
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+#sobremi .about p{
+    font-size: 16px;
+    line-height: 25px;
     text-align: justify;
-    font-size: 18px;
+    color: #3e3e3e;
 }
 .descargar-cv{
-    background:#060606;
-    color: whitesmoke;
+    color: #3e3e3e;
     cursor: pointer;
-    border: none;
+    border: 2px solid rgb(0, 0, 0, 0.4);
     padding: 16px 32px;
     font-size: 25px;
     font-weight: bold;
     position: relative;
     border-radius: 20px;
-    margin-top: 50px;
+    margin-top: 40px;
+    z-index: 1;
 }
 .descargar-cv:hover{
-    color: #Eaff6a;
+    border: 2px solid rgb(0, 0, 0, 0.1);
 }
 .descargar-cv::before{
     content: "";
-    position: absolute;
+    position:absolute;
     top: 0;
     left: 0;
     z-index: -1;
@@ -202,7 +219,7 @@ html, body{
     height: 100%;
     background: linear-gradient(
         45deg,
-        #64bba8, #439281, #f75ce5, #Eaff6a,
+        #64bba8, #61c9b2, #f75ce5, #Eaff6a,
         #f6ffbc , pink
     );
     background-size: 800%;
@@ -210,6 +227,7 @@ html, body{
     filter: blur(10px);
     animation: glowing 20s linear infinite;
 }
+
 @keyframes glowing {
     0%{
         background-position: 0 0;
@@ -222,18 +240,10 @@ html, body{
     }
 
 }
-.linea{
-    height: 4px;
-    width: 200px;
-    border-radius: 25px;
-    background-color:#Eaff6a;
-    margin-top: 10px;
-    margin-bottom: 2em;
-}
 
 /* Habilidades*/
 .habilidades{
-    background-color: #343435;
+    background-color: #4e4e4f;
     color: whitesmoke;
     padding: 50px 20px;
     scroll-margin-top:90px ;
@@ -263,7 +273,7 @@ html, body{
 .habilidades .skill .barra-skill{
     height: 8px;
     width: 80%;
-    background-color: #060606;
+    background-color: #242424;
     position: relative;
     margin-bottom: 30px;
 }
@@ -371,7 +381,7 @@ html, body{
 
 /* Seccion Portafolio */
 .portafolio{
-    background-color:#52545a;
+    background-color:#808080;
     color: whitesmoke;
     padding: 100px 50px;
     padding-bottom: 100px;
@@ -591,21 +601,29 @@ footer .arriba{
     .sobremi .fila .col{
         width: fit-content;
     }
-    .sobremi .imagen-sobremi img{
-        width: 100%;
-    }
-    .sobremi .about h2{
-        font-size: 40px;
-    }
-    .sobremi .about p{
-        font-size: 10px;
-    }
+
 }
+@media screen and (min-width: 600px) {
+    .about {
+      flex-direction: row;
+      text-align: left;
+    }
+  
+    .linea {
+      margin: 0 20px;
+    }
+  
+    .about p {
+      max-width: 600px;
+      margin: 0;
+    }
+  }
 
 @media screen and (max-width:700px) {
     .inicio .contenido-banner h1{
         font-size: 40px;
     }
+
     .inicio .contenido-banner h2{
         font-size: 20px;
     }
