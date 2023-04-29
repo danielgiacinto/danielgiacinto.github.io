@@ -348,7 +348,7 @@ html, body{
 }
 @keyframes Net {
     0%{width: 0%;}
-    100%{width: 85%;}
+    100%{width: 80%;}
 }
 .habilidades .skill .Git{
     width: 0%;
@@ -374,13 +374,13 @@ html, body{
     0%{width: 0%;}
     100%{width: 90%;}
 }
-.habilidades .skill .ingles{
+.habilidades .skill .java{
     width: 0%;
-    animation: 2s ingles forwards;
+    animation: 2s java forwards;
 }
-@keyframes ingles {
+@keyframes java {
     0%{width: 0%;}
-    100%{width: 25%;}
+    100%{width: 60%;}
 }
 
 /* Seccion Portafolio */

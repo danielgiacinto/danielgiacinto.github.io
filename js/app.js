@@ -40,7 +40,7 @@ function efectoHabilidades(){
         habilidades[6].classList.add("Git");
         habilidades[7].classList.add("python");
         habilidades[8].classList.add("photoshop");
-        habilidades[9].classList.add("ingles");
+        habilidades[9].classList.add("java");
     }
 }
 
