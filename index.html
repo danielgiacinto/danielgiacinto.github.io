@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="icon" href="img/icon.png" type="image/png">
+    <title>Daniel Giacinto</title>
+</head>
+<body>
+    <!--Barra-->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="/img/icon.png" class="imagen" alt="">
+          </a>
+          <button class="navbar-toggler btn btn-secondary bg-info me-5" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse text-center align-items-center ms-5 mt-3" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto dropdown">
+                <li class="nav-item texto-nav sombra">
+                    <a class ="nav-link fw-bold" href="#sobre-mi" data-bs-dismiss="dropdown">Sobre Mi</a>
+                </li>
+                <li class="nav-item texto-nav sombra">
+                    <a class ="nav-link fw-bold" href="#cv" data-bs-dismiss="dropdown">Curriculum Vitae</a>
+                </li>
+                <li class="nav-item texto-nav sombra">
+                  <a class ="nav-link fw-bold" href="#portafolio" data-bs-dismiss="dropdown">Portafolio</a>
+                </li>
+                <li class="nav-item texto-nav sombra">
+                    <a class ="nav-link fw-bold" href="#contacto" data-bs-dismiss="dropdown">Contacto</a>
+                </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+    <div class="navbar-measure"></div>
+
+    <!--Inicio-->
+    <section class="inicio">
+      <div class="container-fluid">
+        <div class="row text-center">
+          <div class="col-md-12 col-lg-12 text-white-50">
+            <h1 class="display-1 w-100">
+              <span id="typing-text">Hello I'am</span>
+              <span id="typing-cursor"></span>
+            </h1>
+            <h1><span id="daniel" class="display-4" style="color: #9af488;"> </span></h1>
+            <div class="linea col-md-12"></div>
+            <div class="col-md-12 mt-3 logo">
+              <a href="https://www.linkedin.com/in/danielgiacinto/" target="_blank"> <ion-icon name="logo-linkedin"></ion-icon></a>
+              <a href="https://github.com/danielgiacinto" target="_blank"> <ion-icon name="logo-github"></ion-icon></a>
+              <a href="https://mail.google.com/mail/u/0/?ogbl#inbox?compose=CllgCJlKFhNMSWcKdFmBjMqvLtJkcqcXlVLDMPlNJSlMHlTfQNCzjwMgdgDmvnHsBNzdZzjdpvq" target="_blank"><ion-icon name="mail"></ion-icon></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Seccion Sobre Mi-->
+    <section id="sobre-mi">
+      <div class="container-lg">
+        <div class="row single-form g-0 min-vh-100 align-items-center align-content-center justify-content-center pt-5">
+          <div class="col-md-6 mt-5 mt-md-0">
+            <div class="home-img text-center">
+              <img src="/img/imagen linkedin.png" class="rounded-circle mw-100" alt="Imagen de Perfil">
+            </div>
+          </div>
+          <div class="col-md-6 mt-5 mt-md-0 ps-4 order-md-first">
+            <div class="home-text">
+              <h1 class="mb-2 text-info text-uppercase display-6 fw-bold">Daniel Giacinto</h1>
+              <div class="text-muted display-6 mb-3" id="ip">
+                <span class="border-top border-3">Información Personal.</span>
+              </div>
+              <p class="text-muted">Tengo 21 años y vivo en la ciudad de Córdoba. Soy estudiante de segundo año
+                de la Tecnicatura Universitaria en Programación de la UTN-FRC.
+                He adquirido sólidos conocimientos en programación, trabajando
+                con diversos lenguajes y desarrollando habilidades en la
+                manipulación de datos con bases de datos.
+                Me describo como una persona responsable, proactiva y dispuesta a
+                enfrentarme a nuevos desafíos.
+                </p>
+              <div class=" mb-5">
+                <a href="" onclick="verCv()" class="btn btn-outline-info px-5 mt-3">Descargar CV</a>
+              </div>  
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="display-6 text-center pt-5 pb-5 bg-info-subtle">
+              <span class="text-black-50">Lenguajes y Tecnologías</span>
+            </div>
+          </div>
+          <div class="col-md-12 mt-md-0 pb-5 pt-5">
+            <div class="slider">
+              <div class="slide-track">
+                <div class="slide">
+                  <img src="/img/html.png" alt="Html" title="Htlm">
+                </div>
+                <div class="slide">
+                  <img src="/img/css.png" alt="CSS" title="CSS">
+                </div>
+                <div class="slide">
+                  <img src="/img/javaScript.png" alt="JavaScript" title="JavaScript">
+                </div>
+                <div class="slide">
+                  <img src="/img/Csharp.png" alt="C#" title="C#">
+                </div>
+                <div class="slide">
+                  <img src="/img/sql.png" alt="SQL" title="SQL">
+                </div>
+                <div class="slide">
+                  <img src="/img/python.png" alt="Python" title="Python">
+                </div>
+                <div class="slide">
+                  <img src="/img/git.png" alt="Git" title="Git">
+                </div>
+                <div class="slide">
+                  <img src="/img/photoshop.png" alt="Photoshop" title="Photoshop">
+                </div>
+                <div class="slide">
+                  <img src="/img/java.png" alt="Java" title="Java">
+                </div>
+                <div class="slide">
+                  <img src="/img/netcore.png" alt=".NET CORE" title=".NET CORE">
+                </div>
+                <div class="slide">
+                  <img src="/img/jquery.png" alt="jQuery" title="jQuery">
+                </div>
+                <div class="slide">
+                  <img src="/img/bootstrap.png" alt="Bootstrap" title="Bootstrap">
+                </div>
+                <div class="slide">
+                  <img src="/img/html.png" alt="Html" title="Html">
+                </div>
+                <div class="slide">
+                  <img src="/img/css.png" alt="CSS" title="CSS">
+                </div>
+                <div class="slide">
+                  <img src="/img/javaScript.png" alt="JavaScript" title="JavaScript">
+                </div>
+                <div class="slide">
+                  <img src="/img/Csharp.png" alt="C#" title="C#">
+                </div>
+                <div class="slide">
+                  <img src="/img/sql.png" alt="SQL" title="SQL">
+                </div>
+                <div class="slide">
+                  <img src="/img/python.png" alt="Python" title="Python">
+                </div>
+                <div class="slide">
+                  <img src="/img/git.png" alt="Git" title="Git">
+                </div>
+                <div class="slide">
+                  <img src="/img/photoshop.png" alt="Photoshop" title="Photoshop">
+                </div>
+                <div class="slide">
+                  <img src="/img/java.png" alt="Java" title="Java">
+                </div>
+                <div class="slide">
+                  <img src="/img/netcore.png" alt=".NET CORE" title=".NET CORE">
+                </div>
+                <div class="slide">
+                  <img src="/img/jquery.png" alt="jQuery" title="jQuery">
+                </div>
+                <div class="slide">
+                  <img src="/img/bootstrap.png" alt="Bootstrap" title="Bootstrap">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Seccion CV-->
+    <section id="cv" class="bg-dark">
+      <div class="container-lg">
+          <div class="row min-vh-100 align-items-center align-content-center justify-content-center pt-5">
+
+            <div class="col-md-6 bg-info mb-2" style="cursor: pointer;" id="educacion">
+              <h2 class="display-6 text-black-50 text-center">Educación</h2>
+            </div>
+
+            <div class="col-md-6 mb-2" style="cursor: pointer; background-color: #9af488;" id="experiencia">
+              <h2 class="display-6 text-black-50 text-center">Experiencia</h2>
+            </div>
+
+            <div class="col-md-6 mb-2" id="tup">
+              <div class="rectangulo1">
+                <h4 class="text-white fw-lighter">• 2022-2023</h4>
+                <h3 class="text-white fst-italic">Tecnicatura Universitaria en Programación</h3>
+                <p class="text-white-50 fw-light">En el 2022 adquirí conocimientos en bases de datos con SQL Server 
+                  y pude emplear diferentes tipos de sentencias, como DDL, DML, DCL y TCL. Además, logré desarrollar 
+                  habilidades en la creación y uso de Stored Procedures y Triggers. También programé en C# .NET, 
+                  aplicando principios de POO, CRUD y patrones de diseño como DAO, Singleton y Factory. Por otra parte, 
+                  me introduje en el desarrollo de API Rest. Actualmente, estoy aprendiendo HTML, CSS, JavaScript y Bootstrap, 
+                  y estoy elaborando páginas web estéticas y responsivas. Además, estoy incursionando en Java y Entity Framework. 
+                  Utilizo Git como sistema de control de versiones en mis proyectos.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-md-6 mb-2" id="conti">
+              <div class="rectangulo2">
+                <h4 class="text-white fw-lighter">• 2021-2023</h4>
+                <h3 class="text-white fst-italic">Marketing y Publicidad - Toti Conti S.A</h3>
+                <p class="text-white-50 fw-light">Diseño y Publicación de Flyers en Redes Sociales utilizando Photoshop. <br>
+                  Gestión de cuentas de redes sociales para maximizar el alcance y la visibilidad de los flyers. <br>
+                  Implementación de monitoreo y análisis de resultados para mejorar el impacto de las publicaciones.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-md-6 mb-2" id="cole">
+              <div class="rectangulo1">
+                <h4 class="text-white fw-lighter">• 2014-2019</h4>
+                <h3 class="text-white fst-italic">Bachiller en Informática Educación Secundaria</h3>
+                <p class="text-white-50 fw-light">En Instituto Santisima Trinidad de Hernando, Córdoba, Argentina.</p>
+              </div>
+            </div>
+
+            <div class="col-md-6 mb-2" id="baioco">
+              <div class="rectangulo2">
+                <h4 class="text-white fw-lighter">• 2019-2020</h4>
+                <h3 class="text-white fst-italic">Mantenimiento - Baiocco Menardi</h3>
+                <p class="text-white-50 fw-light">Tareas de mantenimiento, limpieza, instalación de programas y
+                  optimización de software en diversos equipos electrónicos.
+                  Atención al cliente. 
+                  Prestación de Servicios a Domicilio.</p>
+              </div>
+            </div>
+          </div>
+          <div class="row bg-dark m-5">
+
+          </div>
+      </div>
+    </section>
+    
+
+    <!--Portafolio-->  
+    <section id="portafolio" class="portafolio">
+      <div class="container-lg">
+        <div class="row single-form g-0 min-vh-100 align-items-center align-content-center justify-content-center pt-5">
+          <div class="contenido-portafolio">
+            <h2 class="display-4 fw-bold text-info text-center p-5">Proyectos <span class="text-black-50 display-5 border-bottom border-2">personales.</span></h2>
+            <div class="galeria">
+                <div class="proyecto">
+                    <img src="img/p1.jpg" alt="portafolio">
+                    <a href="https://github.com/danielgiacinto/CityCarPII" target="_blank" style="text-decoration: none; color: aliceblue;">
+                        <div class="overlay">
+                            <h3>Aplicacion con Api</h3>
+                            <p>C# - SQL - .NET CORE</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="proyecto">
+                    <img src="img/p2.jpg" alt="portafolio">
+                    <a href="https://github.com/danielgiacinto/KillerRabbit-Beta" target="_blank" style="text-decoration: none; color: aliceblue;">
+                        <div class="overlay">
+                            <h3>VideoJuego con Unity</h3>
+                            <p>C# - Unity - Blender</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="proyecto">
+                    <img src="img/p3.jpg" alt="portafolio">
+                    <a href="https://github.com/danielgiacinto/danielgiacinto.github.io" target="_blank" style="text-decoration: none; color: aliceblue;">
+                        <div class="overlay">
+                            <h3>Portafolio Web</h3>
+                            <p>HTML - CSS - JavaScript</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Contacto-->
+    <section id="contacto">
+      <div class="form-area">
+        <div class="container-lg">
+          <div class="row g-0 min-vh-100 align-items-center align-content-center pt-3">
+            <div class="col-md-12 col-lg-6">
+              <div class="left">
+                <h2 class="display-4 text-white">Cualquier consulta <span class="display-3 fw-bold">Contactame.</span></h2>
+              </div>
+            </div>
+            <div class="col-md-12 col-lg-6">
+              <div class="right">
+                <form action="" id="validar">
+                  <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label text-white">Nombre Completo</label>
+                    <input type="text" class="form-control" name="nombre" id="nombre">
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label text-white">Correo</label>
+                    <input type="email" class="form-control" name="email" id="email">
+                  </div>
+                  <div class="mb-5">
+                    <label for="exampleFormControlTextarea1" class="form-label text-white">Mensaje</label>
+                    <textarea class="form-control" name="texto" id="texto" rows="4"></textarea>
+                  </div>
+                  <button type="submit" class="text-white"></ion-icon>Enviar Mensaje<ion-icon name="send-outline" class="ps-1"></ion-icon>
+                    <span class="overlay"></span>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="waves">
+        <div class="wave" id="wave1"></div>
+        <div class="wave" id="wave2"></div>
+        <div class="wave" id="wave3"></div>
+        <div class="wave" id="wave4"></div>
+
+      </div>
+      <ul class="social_icon">
+        <li><a href="https://www.linkedin.com/in/danielgiacinto/" target="_blank"> <ion-icon name="logo-linkedin"></ion-icon></a></li>
+        <li><a href="https://github.com/danielgiacinto" target="_blank"> <ion-icon name="logo-github"></ion-icon></a></li>
+        <li><a href="https://mail.google.com/mail/u/0/?ogbl#inbox?compose=CllgCJlKFhNMSWcKdFmBjMqvLtJkcqcXlVLDMPlNJSlMHlTfQNCzjwMgdgDmvnHsBNzdZzjdpvq" target="_blank"><ion-icon name="mail"></ion-icon></a></li>
+      </ul>
+      <p class="text-white-50 mt-1">© 2023 Todos los derechos reservados | Giacinto, Daniel José.</p>
+    </footer>
+
+    <div class="circle" id="circle" onclick="scrollToTop()"><ion-icon name="caret-up-outline" style="font-size: 25px;"></ion-icon></ion-icon></div>
+
+<!--Script de Bootstrap-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+<!--Iconos-->
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<!--Jquery-->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<!--Jquery validate-->
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
+<!--Script de SweatAlert-->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<!--Js-->
+<script src="/app.js"></script>
+</body>
+
+</html>
