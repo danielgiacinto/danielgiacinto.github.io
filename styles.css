@@ -8,10 +8,27 @@
   z-index: 1000;
 }
 
+
+.navbar-toggler{
+  border: none !important;
+  color: #0dcaf0;
+}
+.navbar-toggler:focus{
+  box-shadow: none !important;
+  color: #0dcaf0;
+}
+
 .navbar-inner {
   visibility: hidden;
   pointer-events: none;
 }
+
+.navbar-toggler:active,
+.navbar-toggler:focus,
+.navbar-toggler:hover {
+  background-color: transparent !important;
+}
+
 
 .navbar-measure {
   visibility: none !important;
@@ -43,6 +60,13 @@ ul {
 
 .sombra {
   box-shadow: 0 2px 20px -5px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 991px) {
+  .navbar{
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
 }
 
 /* Seccion Inicio */
