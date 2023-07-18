@@ -6,6 +6,12 @@ document.addEventListener("DOMContentLoaded", function() {
     inicioSection.style.minHeight = `calc(100vh - ${navbarHeight}px)`;
 });
 
+// Cerrar barra de navegacion
+function closeNavbar() {
+  var navbarCollapse = document.getElementById("navbarSupportedContent");
+  navbarCollapse.classList.remove("show");
+}
+
 // animar el texto
 function typeWriterEffect() {
     var typingText = document.getElementById("typing-text");
