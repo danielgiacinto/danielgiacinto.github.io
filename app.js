@@ -44,7 +44,7 @@ typeWriterEffect();
 
 //Cambiar palabras
 
-var words = ["Daniel José Giacinto.", "Web Developer.", "Java Developer."]; // Array de palabras a mostrar
+var words = ["Daniel José Giacinto.", "Web Developer.", "Full-Stack Developer."]; // Array de palabras a mostrar
 var currentWordIndex = 0;
 var danielElement = document.getElementById("daniel");
 
@@ -74,22 +74,23 @@ function verCv(){
   window.open('CV_Giacinto, Daniel.pdf', '_blank')
 }
 
-  
-// Mostrar educacion
+  // Mostrar educacion
 $(document).ready(function () {
-  $("#educacion").click(function(){
+
+  $("#educacion").click(function(event){
+     event.preventDefault();
      $("#tup").slideToggle("slow");
      $("#cole").slideToggle("slow");
   });
-});
 
-// Mostrar experiencia
-$(document).ready(function () {
-  $("#experiencia").click(function(){
+  // Mostrar experiencia
+  $("#experiencia").click(function(event){
+     event.preventDefault();
      $("#conti").slideToggle("slow");
      $("#baioco").slideToggle("slow");
   });
 });
+
 
 function limpiarCampos(){
   document.getElementById("nombre").value = "";
