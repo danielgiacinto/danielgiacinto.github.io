@@ -50,7 +50,7 @@ typeWriterEffect();
 
 //Cambiar palabras
 
-var words = ["Daniel José Giacinto.", "Web Developer.", "Full-Stack Developer."]; // Array de palabras a mostrar
+var words = ["Daniel José Giacinto.", ".Net Core Developer.", "Full-Stack Developer.", "Java Developer."]; // Array de palabras a mostrar
 var currentWordIndex = 0;
 var danielElement = document.getElementById("daniel");
 
@@ -107,35 +107,51 @@ function limpiarCampos(){
 // Validar formulario
 $(document).ready(function(){
   $("#validar").validate({
-      rules: {
-        nombre: {
-          required: true,
-          minlength: 3
-        },
-        email: {
-          required: true,
-          email: true
-        },
-        texto: {
-          required: true,
-          minlength: 3
-        }
+    rules: {
+      nombre: {
+        required: true,
+        minlength: 3
       },
-      errorClass: 'is-invalid',
-      validClass: 'is-valid',
-
-      submitHandler: function() {
-
-        Swal.fire({
-          icon: 'success',
-          title: 'Correo enviado !!',
-          text: 'Datos ingresados correctamente',
-          timer: 2000
-        })
-        limpiarCampos();
+      email: {
+        required: true,
+        email: true
+      },
+      texto: {
+        required: true,
+        minlength: 3
       }
+    },
+    errorClass: 'is-invalid',
+    validClass: 'is-valid',
+
+    submitHandler: function(form) {
+      $.ajax({
+        type: "POST",
+        url: "enviar_correo.php",
+        data: $(form).serialize(),
+        dataType: "json",
+        success: function(response) {
+          if (response.status === "success") {
+            Swal.fire({
+              icon: 'success',
+              title: 'Correo enviado !!',
+              text: 'Datos ingresados correctamente',
+              timer: 2000
+            });
+            limpiarCampos();
+          } else {
+            Swal.fire({
+              icon: 'error',
+              title: 'Error al enviar el correo',
+              text: 'Por favor, intenta nuevamente más tarde',
+            });
+          }
+        }
+      });
+    }
   });
 });
+
 
 // Traducir las validaciones
 
