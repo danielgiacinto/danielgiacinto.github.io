@@ -50,7 +50,7 @@ typeWriterEffect();
 
 //Cambiar palabras
 
-var words = ["Daniel José Giacinto.", ".Net Core Developer.", "Full-Stack Developer.", "Java Developer."]; // Array de palabras a mostrar
+var words = ["Daniel José Giacinto.", ".Net Core Developer.", "Full-Stack Developer.", "Java Developer.", "Angular Developer."];
 var currentWordIndex = 0;
 var danielElement = document.getElementById("daniel");
 
