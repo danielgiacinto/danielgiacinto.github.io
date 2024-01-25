@@ -102,6 +102,10 @@ function limpiarCampos(){
   document.getElementById("nombre").value = "";
   document.getElementById("email").value = "";
   document.getElementById("texto").value = "";
+  $("#validar")[0].reset();
+
+  $("#validar").find(".is-valid").removeClass("is-valid");
+  $("#validar").find(".is-invalid").removeClass("is-invalid");
 }
 
 // Validar formulario
@@ -110,7 +114,8 @@ $(document).ready(function(){
     rules: {
       nombre: {
         required: true,
-        minlength: 3
+        minlength: 3,
+        
       },
       email: {
         required: true,
@@ -124,30 +129,15 @@ $(document).ready(function(){
     errorClass: 'is-invalid',
     validClass: 'is-valid',
 
-    submitHandler: function(form) {
-      $.ajax({
-        type: "POST",
-        url: "enviar_correo.php",
-        data: $(form).serialize(),
-        dataType: "json",
-        success: function(response) {
-          if (response.status === "success") {
-            Swal.fire({
-              icon: 'success',
-              title: 'Correo enviado !!',
-              text: 'Datos ingresados correctamente',
-              timer: 2000
-            });
-            limpiarCampos();
-          } else {
-            Swal.fire({
-              icon: 'error',
-              title: 'Error al enviar el correo',
-              text: 'Por favor, intenta nuevamente más tarde',
-            });
-          }
-        }
+    submitHandler: function () {
+      Swal.fire({
+        icon: 'success',
+        title: 'Correo enviado !!',
+        text: 'Datos ingresados correctamente',
+        timer: 2000
       });
+      limpiarCampos();
+      return false;
     }
   });
 });

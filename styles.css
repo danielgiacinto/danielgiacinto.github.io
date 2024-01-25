@@ -369,6 +369,9 @@ ul {
   border: 2px solid #fff;
   color: #ffffff;
 }
+label.is-invalid {
+  color: rgb(255, 255, 255) !important;
+}
 
 /* Footer*/
 footer {
