@@ -1,0 +1,95 @@
+<div class="container-fluid pb-5" [ngClass]="isDarkMode ? 'bg-dark' : 'fondo-degrade'" style="font-family: 'Onest';">
+  <div class="row container d-flex justify-content-center align-items-center mx-auto">
+    <div class="col-md-12 mt-4 mb-4">
+      <nav class="navbar">
+        <div class="container-fluid">
+          <ul class="card bg-transparent d-flex flex-row rounded-5 p-2 ps-4 pe-4 justify-content-center align-items-center gap-4 list-unstyled m-auto" style="border: 1px solid #bebebe;">
+            <li class="nav-item">
+              <a class="nav-link fw-semibold fs-4 color-header" routerLink="/"><i class="bi bi-house"></i> </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-semibold fs-4 color-header" routerLink="/experience"><i class="bi bi-person-workspace"></i> </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-semibold fs-4 color-header" routerLink="/skills" ><i class="bi bi-heart"></i> </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-semibold fs-4 color-header" routerLink="/projects"><i class="bi bi-box-seam"></i> </a>
+            </li>
+            <li>
+              <a>
+                <label class="toggle" for="switch">
+                  <input id="switch" class="input" type="checkbox" (change)="toggleTheme()">
+                  <div class="icon icon--moon">
+                      <svg height="25" width="25" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <path clip-rule="evenodd" d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z" fill-rule="evenodd"></path>
+                      </svg>
+                  </div>
+              
+                  <div class="icon icon--sun">
+                      <svg height="25" width="25" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z"></path>
+                      </svg>
+                  </div>
+              </label>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="col-lg-4 col-sm-12 col-xs-12">
+      <div class="card rounded-5 border-0 efecto-vidrio user-select-none pb-3">
+        <div class="card-header mt-4 d-flex justify-content-center border-0 bg-transparent">
+          <div class="card rounded-5 border-0 p-2 bg-dark bg-opacity-50">
+            <img src="assets/avatar.png" class="card-img-top img-fluid rounded-circle" style="width: 200px; height: 200px; object-fit: cover;">
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="col-md-12 mb-3">
+            <h3 class="fw-bold fs-2 text-center text-white">Daniel Giacinto</h3>
+          </div>
+          <div class="col-md-12 mt-3 text-center">
+            <ul class="d-flex justify-content-center align-items-center me-auto list-unstyled gap-2">
+              <li class="nav-item">
+                <a class="btn btn-dark rounded-5 fs-6 border-1 boton-redes" href="https://www.linkedin.com/in/danielgiacinto/" target="_blank" role="button"><i class="bi bi-linkedin"></i> Linkedin </a>
+              </li>
+              <li class="nav-item">
+                <a class="btn btn-dark rounded-5 fs-6 border-1 boton-redes" href="https://github.com/danielgiacinto" target="_blank" role="button"><i class="bi bi-github"></i> GitHub </a>
+              </li>
+              <li class="nav-item">
+                <a class="btn btn-dark rounded-5 fs-6 border-1 boton-redes" href="https://github.com/danielgiacinto" target="_blank" role="button"><i class="bi bi-envelope-fill"></i> Email</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-12">
+            <div class="card card rounded-5 border-0 bg-dark bg-opacity-50" style="background-color: #434343;">
+              <ul class="list-unstyled text-center m-0 p-0">`
+                <li class="mb-3">
+                  <i class="bi bi-envelope-fill fs-5 text-white me-2"></i>
+                  <span class="text-white">danielgiacinto@gmail.com</span>
+                </li>
+                <li class="mb-3">
+                  <i class="bi bi-geo-alt-fill fs-5 text-white me-2"></i>
+                  <span class="text-white">Córdoba, Argentina</span>
+                </li>
+                <li class="mb-3">
+                  <i class="bi bi-telephone-fill fs-5 text-white me-2"></i>
+                  <span class="text-white">+54 353 4067588</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer border-0 bg-transparent">
+          <div class="col-md-12 text-center">
+            <button class="btn btn-outline-light rounded-5 border-2 pt-2 pb-2 ps-3 pe-3 fs-6" (click)="openCV()" type="button"><i class="bi bi-file-earmark-text"></i> Cirriculum</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-8">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

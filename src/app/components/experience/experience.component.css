@@ -1,0 +1,56 @@
+.efecto-vidrio {
+    background: linear-gradient(120deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border:1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.timeline {
+    position: relative;
+    margin-top: 5px;
+    padding-left: 15px;
+    border-left: none;
+}
+  
+.timeline-item {
+    position: relative;
+    margin-bottom: 30px;
+    padding-left: 40px;
+}
+  
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 16.5px; /* Ajusta esto para centrar la línea en el ícono */
+    width: 3px;
+    height: 124%;
+    background-color: rgba(255, 255, 255, 0.1);
+    z-index: -1;
+}
+  
+.timeline-item:last-child::before {
+    height: 100%; /* Solo mitad de altura en el último item para finalizar la línea */
+}
+  
+.timeline-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 35px;
+    height: 35px;
+    background-color: #0dcaf0;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+  
+  
+  
