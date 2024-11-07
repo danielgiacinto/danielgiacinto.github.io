@@ -79,8 +79,8 @@ button:hover::before {
 
 .toggle {
     background-color: #fff;
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     border-radius: 50%;
     display: grid;
     place-items: center;
@@ -114,4 +114,10 @@ button:hover::before {
 #switch:checked ~ .icon--sun {
     transition-delay: 200ms;
     transform: scale(1) rotate(360deg);
+}
+
+@media (max-width: 768px) {
+    .nav-item .nav-link .text {
+      display: none; /* Oculta el texto */
+    }
 }
