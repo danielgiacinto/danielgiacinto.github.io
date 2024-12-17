@@ -1,22 +1,21 @@
 <div class="container-fluid pb-5" [ngClass]="isDarkMode ? 'bg-dark' : 'fondo-degrade'" style="font-family: 'Onest';">
   <div class="row container d-flex mx-auto">
-    <div class="col-md-12 mt-4 mb-4">
-      <nav class="navbar">
-        <div class="container-fluid">
-          <ul class="card bg-transparent d-flex flex-row rounded-5 border-0 p-2 ps-4 pe-4 justify-content-center align-items-center gap-4 list-unstyled m-auto">
+    <div class="col-md-12 mb-5 mt-5">
+      <nav class="navbar navbar-expand-lg mt-2 fixed-top">
+          <ul class="card efecto-vidrio d-flex flex-row rounded-5 border-0 p-2 ps-4 pe-4 justify-content-center align-items-center gap-4 list-unstyled m-auto">
             <li class="nav-item">
-              <a class="nav-link fw-semibold fs-5 color-header" href="#experience"><i class="bi bi-person-workspace"></i> 
-                <span class="text"> Experience</span> 
+              <a class="nav-link fw-semibold color-header" href="#experience"><i class="bi bi-person-workspace"></i> 
+                <span class="text"> Experiencia</span> 
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link fw-semibold fs-5 color-header" href="#skills"><i class="bi bi-heart"></i> 
-                <span class="text"> Skills</span>
+              <a class="nav-link fw-semibold color-header" href="#skills"><i class="bi bi-heart"></i> 
+                <span class="text"> Habilidades</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link fw-semibold fs-5 color-header" href="#projects"><i class="bi bi-box-seam"></i> 
-                <span class="text"> Projects</span>
+              <a class="nav-link fw-semibold color-header" href="#projects"><i class="bi bi-code-slash"></i>
+                <span class="text"> Proyectos</span>
               </a>
             </li>
             <li>
@@ -24,7 +23,7 @@
                 <label class="toggle" for="switch">
                   <input id="switch" class="input" type="checkbox" (change)="toggleTheme()">
                   <div class="icon icon--moon">
-                      <svg height="25" width="25" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <svg height="23" width="23" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                           <path clip-rule="evenodd" d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z" fill-rule="evenodd"></path>
                       </svg>
                   </div>
@@ -38,10 +37,9 @@
               </a>
             </li>
           </ul>
-        </div>
       </nav>
     </div>
-    <div class="col-lg-4 col-sm-12 col-xs-12 mb-4">
+    <div class="col-lg-4 col-sm-12 col-xs-12 mb-4 mt-5">
       <div class="card rounded-5 border-0 efecto-vidrio pb-3">
         <div class="card-header mt-4 d-flex justify-content-center border-0 bg-transparent">
           <div class="card rounded-5 border-0 p-1 bg-dark bg-opacity-50">
@@ -91,7 +89,7 @@
         </div>
       </div>
     </div>
-    <div class="col-lg-8 col-sm-12 col-xs-12">
+    <div class="col-lg-8 col-sm-12 col-xs-12 mt-5">
       <app-home></app-home>
       <div id="experience">
         <app-experience></app-experience>

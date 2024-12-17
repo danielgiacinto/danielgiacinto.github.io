@@ -10,7 +10,7 @@ export class HomeComponent implements OnInit {
   title = ''; 
   fullTitle = "Daniel Giacinto."; 
   typingSpeed = 200;
-  roles = ["Full Stack Developer", "Software Testing Engineer", "Java Developer", "Angular Developer", ".NET Core Developer"];
+  roles = ["Full Stack Developer", "Java Developer", "Angular Developer", ".NET Core Developer"];
   currentRoleIndex = 0; 
   currentRole = this.roles[this.currentRoleIndex]; 
   changeInterval = 3000; 

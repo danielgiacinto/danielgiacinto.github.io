@@ -1,5 +1,6 @@
+
+
 .fondo-degrade {
-    position: relative;
     background-image: url("/assets/fondo.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -19,7 +20,7 @@
 }
 
 .color-header {
-    color: #bebebe;
+    color: #cccccc;
 }
 
 .color-header:hover {
@@ -37,7 +38,6 @@
 .boton-redes:hover {
     transform: scale(1.05); /* Usa transform: scale en lugar de solo scale */
 }
-
 
 button {
     border: unset;
