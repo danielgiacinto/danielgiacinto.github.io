@@ -46,4 +46,6 @@ export class HomeComponent implements OnInit {
       }, 500); // Espera 500 ms para reiniciar el efecto de fade-in
     }, this.changeInterval);
   }
+
+
 }
