@@ -1,0 +1,40 @@
+.efecto-vidrio {
+    background: linear-gradient(120deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border:1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+
+.boton-redes {
+    border-color: #0dcaf0;
+    color: #0dcaf0;
+    animation: color-change 3s infinite;
+    transition: border-color 1s ease-in-out, color 1s ease-in-out;
+}
+
+@keyframes color-change {
+    0% {
+      border-color: #0dcaf0;
+      color: #0dcaf0;
+    }
+    25% {
+      border-color: #17a2b8;
+      color: #17a2b8;
+    }
+    50% {
+      border-color: #f00de5;
+      color: #ff45f6;
+    }
+    75% {
+      border-color: #a5db2e;
+      color: #a0e210;
+    }
+    100% {
+      border-color: #0dcaf0;
+      color: #0dcaf0;
+    }
+}
+
