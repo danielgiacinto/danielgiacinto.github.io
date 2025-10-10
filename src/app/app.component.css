@@ -1,3 +1,19 @@
+/* Animación de gradiente para el nombre principal */
+.nombre-animado {
+    background: linear-gradient(90deg, #0dcaf0,#fff, #0dcaf0);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    animation: gradientText 5s ease-in-out infinite;
+}
+
+@keyframes gradientText {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
 
 
 .fondo-degrade {
@@ -12,8 +28,8 @@
 
 .efecto-vidrio {
     background: linear-gradient(120deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
-    backdrop-filter: blur(30px);
-    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(80px);
+    -webkit-backdrop-filter: blur(80px);
     border-radius: 20px;
     border:1px solid rgba(255, 255, 255, 0.18);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
@@ -25,6 +41,14 @@
 
 .color-header:hover {
     color: #ffffff;
+}
+
+.nav-item {
+     transition: transform 0.3s ease-in-out;
+}
+.nav-item:hover {
+     transform: scale(1.02);
+     z-index: 2;
 }
 
 .boton-redes {

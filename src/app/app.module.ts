@@ -6,13 +6,11 @@ import { AppComponent } from './app.component';
 import { ExperienceComponent } from './components/experience/experience.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { SkillsComponent } from './components/skills/skills.component';
-import { HomeComponent } from './components/home/home.component';
 import { EducationComponent } from './components/education/education.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
     ExperienceComponent,
     ProjectsComponent,
     SkillsComponent,

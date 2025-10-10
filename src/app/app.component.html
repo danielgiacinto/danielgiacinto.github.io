@@ -1,93 +1,210 @@
-<div class="container-fluid pb-5" [ngClass]="isDarkMode ? 'bg-dark' : 'fondo-degrade'" style="font-family: 'Onest';">
-  <div class="row container d-flex mx-auto justify-content-center align-items-center">
+<div
+  class="container-fluid pb-5"
+  [ngClass]="isDarkMode ? 'bg-dark' : 'fondo-degrade'"
+  style="font-family: 'Onest'"
+>
+  <div
+    class="row container d-flex mx-auto justify-content-center align-items-center"
+  >
     <div class="col-md-12 mb-5 mt-5">
       <nav class="navbar navbar-expand-lg mt-2 fixed-top">
-          <ul class="card efecto-vidrio d-flex flex-row rounded-5 border-0 p-2 ps-4 pe-4 justify-content-center align-items-center gap-4 list-unstyled m-auto">
-            <li class="nav-item">
-              <a class="nav-link fw-semibold color-header" href="#experience"><i class="bi bi-person-workspace"></i> 
-                <span class="text"> Experiencia</span> 
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link fw-semibold color-header" href="#education"><i class="bi bi-mortarboard"></i> 
-                <span class="text"> Educación</span> 
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link fw-semibold color-header" href="#skills"><i class="bi bi-heart"></i> 
-                <span class="text"> Habilidades</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link fw-semibold color-header" href="#projects"><i class="bi bi-code-slash"></i>
-                <span class="text"> Proyectos</span>
-              </a>
-            </li>
-            <li>
-              <a>
-                <label class="toggle" for="switch">
-                  <input id="switch" class="input" type="checkbox" (change)="toggleTheme()">
-                  <div class="icon icon--moon">
-                      <svg height="23" width="23" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                          <path clip-rule="evenodd" d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z" fill-rule="evenodd"></path>
-                      </svg>
-                  </div>
-                  <div class="icon icon--sun">
-                      <svg height="25" width="25" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z"></path>
-                      </svg>
-                  </div>
+        <ul
+          class="card efecto-vidrio d-flex flex-row rounded-5 border-0 p-2 ps-4 pe-4 justify-content-center align-items-center gap-4 list-unstyled m-auto"
+        >
+          <li class="nav-item">
+            <a class="nav-link fw-semibold color-header" href="#experience"
+              ><i class="bi bi-person-workspace"></i>
+              <span class="text"> Experiencia</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-semibold color-header" href="#education"
+              ><i class="bi bi-mortarboard"></i>
+              <span class="text"> Educación</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-semibold color-header" href="#skills"
+              ><i class="bi bi-heart"></i>
+              <span class="text"> Habilidades</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-semibold color-header" href="#projects"
+              ><i class="bi bi-code-slash"></i>
+              <span class="text"> Proyectos</span>
+            </a>
+          </li>
+          <li>
+            <a>
+              <label class="toggle" for="switch">
+                <input
+                  id="switch"
+                  class="input"
+                  type="checkbox"
+                  (change)="toggleTheme()"
+                />
+                <div class="icon icon--moon">
+                  <svg
+                    height="23"
+                    width="23"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z"
+                      fill-rule="evenodd"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="icon icon--sun">
+                  <svg
+                    height="25"
+                    width="25"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z"
+                    ></path>
+                  </svg>
+                </div>
               </label>
-              </a>
-            </li>
-          </ul>
+            </a>
+          </li>
+        </ul>
       </nav>
     </div>
-    <div class="col-lg-7 col-sm-12 col-xs-12 mb-4 mt-5">
+    <div class="col-lg-8 col-sm-12 col-xs-12 mb-4 mt-5">
       <div class="card rounded-5 border-0 efecto-vidrio pb-3">
         <div class="card-body">
           <div class="row d-flex justify-content-center align-items-center">
-            <div class="col-md-5 d-flex justify-content-center">
-              <div class="card rounded-5 border-0 p-2 bg-dark bg-opacity-50 mt-4">
-                <img src="assets/avatar.png" class="card-img-top img-fluid rounded-circle" style="width: 200px; height: 200px; object-fit: cover;">
-              </div>
+            <div class="col-md-12 mt-3 text-start">
+              <h3 class="fw-bold display-5 text-center nombre-animado">
+                Daniel José Giacinto
+              </h3>
             </div>
-            <div class="col-md-7 mb-3 align-items-start justify-content-start">
-              <div class="col-md-10 mt-3 text-center">
-                <h3 class="fw-bold fs-2 text-center text-white">Daniel José Giacinto</h3>
+            <div class="row mt-3 align-items-center justify-content-center">
+              <div
+                class="col-md-5 col-sm-12 d-flex justify-content-md-end justify-content-center"
+              >
+                <div class="card rounded-5 border-0 p-2 bg-dark bg-opacity-50">
+                  <img
+                    src="assets/avatar.png"
+                    class="card-img-top img-fluid rounded-circle"
+                    style="width: 200px; height: 200px; object-fit: cover"
+                  />
+                </div>
               </div>
-              <div class="col-md-10 mt-3 text-center">
-                <ul class="d-flex justify-content-center align-items-center me-auto list-unstyled gap-3">
-                  <li class="nav-item">
-                    <a class="btn btn-dark rounded-5 fs-6 border-1 boton-redes" href="https://www.linkedin.com/in/danielgiacinto/" title="Linkedin" target="_blank" role="button"><i class="bi bi-linkedin"></i> </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="btn btn-dark rounded-5 fs-6 border-1 boton-redes" href="https://github.com/danielgiacinto" title="Github" target="_blank" role="button"><i class="bi bi-github"></i> </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="btn btn-dark rounded-5 fs-6 border-1 boton-redes" href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=CllgCJvqslhZFQZbXQdmJPzvqLwpSjFvLldKPnkHzbqzXXgXDJDdBfZqGjDbnsTJbbhgxZPJPTg" title="Correo" target="_blank" role="button"><i class="bi bi-envelope-fill"></i> </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="btn btn-dark rounded-5 fs-6 border-1 boton-redes" (click)="openCV()" title="Curriculum"><i class="bi bi-file-earmark-person-fill"></i> </a>
-                  </li>
-                </ul>
-              </div>
-              <div class="col-md-10">
-                <div class="card card rounded-5 border-0 bg-dark bg-opacity-50" style="background-color: #434343;">
-                  <ul class="list-unstyled text-center m-0 p-0">`
-                    <li class="mb-3">
-                      <i class="bi bi-envelope-fill fs-5 text-white me-2"></i>
-                      <span class="text-white">danielgiacinto@gmail.com</span>
+              <div class="col-md-7 align-items-center justify-content-center">
+                <div class="col-md-10 mt-3 text-center">
+                  <ul
+                    class="d-flex align-items-center justify-content-center me-auto list-unstyled gap-3"
+                  >
+                    <li class="nav-item">
+                      <a
+                        class="btn btn-dark rounded-5 fs-6 border-1 boton-redes"
+                        href="https://www.linkedin.com/in/danielgiacinto/"
+                        title="Linkedin"
+                        target="_blank"
+                        role="button"
+                        ><i class="bi bi-linkedin"></i>
+                      </a>
                     </li>
-                    <li class="mb-3">
+                    <li class="nav-item">
+                      <a
+                        class="btn btn-dark rounded-5 fs-6 border-1 boton-redes"
+                        href="https://github.com/danielgiacinto"
+                        title="Github"
+                        target="_blank"
+                        role="button"
+                        ><i class="bi bi-github"></i>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        class="btn btn-dark rounded-5 fs-6 border-1 boton-redes"
+                        href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=CllgCJvqslhZFQZbXQdmJPzvqLwpSjFvLldKPnkHzbqzXXgXDJDdBfZqGjDbnsTJbbhgxZPJPTg"
+                        title="Correo"
+                        target="_blank"
+                        role="button"
+                        ><i class="bi bi-envelope-fill"></i>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        class="btn btn-dark rounded-5 fs-6 border-1 boton-redes"
+                        (click)="openCV()"
+                        title="Curriculum"
+                        ><i class="bi bi-file-earmark-person-fill"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div
+                  class="col-md-10 d-flex flex-column justify-content-center text-center align-items-center mt-3"
+                >
+                  <ul class="list-unstyled m-0 p-0 d-flex flex-column gap-0">
+                    <li
+                      class="mb-3 badge bg-dark bg-opacity-25 rounded-pill px-4 py-2"
+                    >
                       <i class="bi bi-geo-alt-fill fs-5 text-white me-2"></i>
                       <span class="text-white">Córdoba, Argentina</span>
                     </li>
-                    <li class="mb-3">
+                    <li
+                      class="mb-3 badge bg-dark bg-opacity-25 rounded-pill px-4 py-2"
+                    >
                       <i class="bi bi-telephone-fill fs-5 text-white me-2"></i>
                       <span class="text-white">+54 353 4067588</span>
                     </li>
+                                        <li
+                      class="mb-3 badge bg-dark bg-opacity-25 rounded-pill px-4 py-2"
+                    >
+                      <i class="bi bi-envelope-fill fs-5 text-white me-2"></i>
+                      <span class="text-white">danielgiacinto@gmail.com</span>
+                    </li>
                   </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row d-flex justify-content-center align-items-center">
+            <div class="col-md-10 p-2 mt-3">
+              <div
+                class="card rounded-5 border-0 bg-dark bg-opacity-25 text-md-start text-center"
+                style="background-color: #434343"
+              >
+                <div class="row gap-4 p-3">
+                  <div class="text-center col-12 col-md">
+                    <i
+                      class="bi bi-mortarboard-fill"
+                      style="font-size: 2rem; color: #0dcaf0"
+                    ></i>
+                    <div class="fw-semibold text-white mt-2">
+                      Técnico en Programación
+                    </div>
+                  </div>
+                  <div class="text-center col-12 col-md">
+                    <i
+                      class="bi bi-clock-history"
+                      style="font-size: 2rem; color: #0dcaf0"
+                    ></i>
+                    <div class="fw-semibold text-white mt-2">
+                      +3 años de experiencia
+                    </div>
+                  </div>
+                  <div class="text-center col-12 col-md">
+                    <i
+                      class="bi bi-lightning-charge-fill"
+                      style="font-size: 2rem; color: #0dcaf0"
+                    ></i>
+                    <div class="fw-semibold text-white mt-2">
+                      Full Stack Developer
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -96,17 +213,16 @@
       </div>
     </div>
     <div class="col-lg-8 col-sm-12 col-xs-12 mt-5">
-      <app-home></app-home>
-      <div id="experience">
+      <div id="experience" class="mt-5 pb-5">
         <app-experience></app-experience>
       </div>
-      <div id="education">
+      <div id="education" class="mt-5 pb-5">
         <app-education></app-education>
       </div>
-      <div id="skills">
+      <div id="skills" class="mt-5 pb-5">
         <app-skills></app-skills>
       </div>
-      <div id="projects">
+      <div id="projects" class="mt-5 pb-5">
         <app-projects></app-projects>
       </div>
     </div>
