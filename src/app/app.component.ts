@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  isDarkMode = false;
+  isDarkMode = true;
 
 
   toggleTheme() {

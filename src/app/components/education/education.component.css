@@ -1,3 +1,59 @@
+.logo-utn {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+  background: transparent;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap; /* 🔹 evita que el logo y el texto se separen */
+  gap: 1rem; /* espaciado entre logo y texto */
+  text-align: left;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Evita que en pantallas pequeñas se apilen */
+@media (max-width: 576px) {
+  .header-container {
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+  }
+
+  .text-container {
+    text-align: left;
+  }
+
+  .logo-utn {
+    height: 40px; /* un poco más chico en móviles */
+  }
+}
+
+/* Cards educación */
+.card-edu {
+  background: rgba(255,255,255,0.05);
+  border: 2px solid rgba(13,202,240,0.3);
+  border-radius: 18px;
+  box-shadow: 0 4px 24px 0 rgba(13,202,240,0.08);
+  transition: transform 0.3s cubic-bezier(.4,2,.3,1), box-shadow 0.3s;
+}
+.card-edu:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 16px 2px #0dcaf0, 0 4px 24px 0 rgba(13,202,240,0.18);
+  border-color: #0dcaf0;
+}
+.edu-icon {
+  font-size: 2.2rem;
+  color: #0dcaf0;
+  filter: drop-shadow(0 0 6px #0dcaf0);
+}
 .efecto-vidrio {
     background: linear-gradient(120deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
     backdrop-filter: blur(30px);
@@ -7,34 +63,4 @@
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 
-
-.boton-redes {
-    border-color: #0dcaf0;
-    color: #0dcaf0;
-    animation: color-change 3s infinite;
-    transition: border-color 1s ease-in-out, color 1s ease-in-out;
-}
-
-@keyframes color-change {
-    0% {
-      border-color: #0dcaf0;
-      color: #0dcaf0;
-    }
-    25% {
-      border-color: #17a2b8;
-      color: #17a2b8;
-    }
-    50% {
-      border-color: #f00de5;
-      color: #ff45f6;
-    }
-    75% {
-      border-color: #a5db2e;
-      color: #a0e210;
-    }
-    100% {
-      border-color: #0dcaf0;
-      color: #0dcaf0;
-    }
-}
 
