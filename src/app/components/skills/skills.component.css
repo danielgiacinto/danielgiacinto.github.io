@@ -59,6 +59,58 @@
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 
+.modo-claro .efecto-habilidad {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(248, 249, 250, 0.9)) !important;
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.1), 0 2px 8px 0 rgba(0, 0, 0, 0.06) !important;
+    transition: all 0.3s ease !important;
+}
+
+.modo-claro .efecto-habilidad:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.15), 0 4px 12px 0 rgba(0, 0, 0, 0.1) !important;
+}
+
+.modo-claro .tracker-border[data-color="blue"] {
+    background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), rgba(13, 202, 240, 0.2) 0%, rgba(13, 202, 240, 0.1) 50%, transparent 100%) !important;
+    box-shadow: 0 0 20px 6px rgba(13, 202, 240, 0.15), 0 0 40px 12px rgba(13, 202, 240, 0.1) !important;
+}
+
+.modo-claro .tracker-border[data-color="yellow"] {
+    background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), rgba(255, 193, 7, 0.2) 0%, rgba(255, 193, 7, 0.1) 50%, transparent 100%) !important;
+    box-shadow: 0 0 20px 6px rgba(255, 193, 7, 0.15), 0 0 40px 12px rgba(255, 193, 7, 0.1) !important;
+}
+
+.modo-claro .tracker-border[data-color="white"] {
+    background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), rgba(108, 117, 125, 0.2) 0%, rgba(108, 117, 125, 0.1) 50%, transparent 100%) !important;
+    box-shadow: 0 0 20px 6px rgba(108, 117, 125, 0.15), 0 0 40px 12px rgba(108, 117, 125, 0.1) !important;
+}
+
+.modo-claro .tracker-border[data-color="pink"] {
+    background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), rgba(255, 20, 147, 0.2) 0%, rgba(255, 20, 147, 0.1) 50%, transparent 100%) !important;
+    box-shadow: 0 0 20px 6px rgba(255, 20, 147, 0.15), 0 0 40px 12px rgba(255, 20, 147, 0.1) !important;
+}
+
+.modo-claro .efecto-habilidad:hover .tracker-border[data-color="blue"] {
+    border: 1px solid #0dcaf0 !important;
+    box-shadow: 0 0 30px 10px rgba(13, 202, 240, 0.3), 0 0 60px 20px rgba(13, 202, 240, 0.15) !important;
+}
+
+.modo-claro .efecto-habilidad:hover .tracker-border[data-color="yellow"] {
+    border: 1px solid #ffc107 !important;
+    box-shadow: 0 0 30px 10px rgba(255, 193, 7, 0.3), 0 0 60px 20px rgba(255, 193, 7, 0.15) !important;
+}
+
+.modo-claro .efecto-habilidad:hover .tracker-border[data-color="white"] {
+    border: 1px solid #6c757d !important;
+    box-shadow: 0 0 30px 10px rgba(108, 117, 125, 0.3), 0 0 60px 20px rgba(108, 117, 125, 0.15) !important;
+}
+
+.modo-claro .efecto-habilidad:hover .tracker-border[data-color="pink"] {
+    border: 1px solid #ff1493 !important;
+    box-shadow: 0 0 30px 10px rgba(255, 20, 147, 0.3), 0 0 60px 20px rgba(255, 20, 147, 0.15) !important;
+}
+
 .animacion{
     scale: 1.0;
     transition: transform 0.3s ease-in-out;

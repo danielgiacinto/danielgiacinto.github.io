@@ -16,23 +16,35 @@
 }
 
 
-.fondo-degrade {
-    background-image: url("/assets/fondo.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center center;
+.modo-claro {
+    background-color: #ffffff !important;
     min-height: 100vh;
     height: 100%;
 }
 
+.modo-claro .efecto-vidrio {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(40px) saturate(180%);
+    -webkit-backdrop-filter: blur(40px) saturate(180%);
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1), inset 0 1px 0 0 rgba(255, 255, 255, 0.8);
+}
+
+.modo-claro .color-header {
+    color: #333333;
+}
+
+.modo-claro .color-header:hover {
+    color: #000000;
+}
+
 .efecto-vidrio {
-    background: linear-gradient(120deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
-    backdrop-filter: blur(80px);
-    -webkit-backdrop-filter: blur(80px);
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(40px) saturate(180%);
+    -webkit-backdrop-filter: blur(40px) saturate(180%);
     border-radius: 20px;
-    border:1px solid rgba(255, 255, 255, 0.18);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4), inset 0 1px 0 0 rgba(255, 255, 255, 0.15);
 }
 
 .color-header {
@@ -56,11 +68,22 @@
     scale: 1.0;
     border: 1px solid rgba(255, 255, 255, 0.18);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-    transition: transform 0.3s ease-in-out; /* Añade esta línea */
+    transition: transform 0.3s ease-in-out;
 }
 
 .boton-redes:hover {
-    transform: scale(1.05); /* Usa transform: scale en lugar de solo scale */
+    transform: scale(1.05);
+}
+
+.modo-claro .boton-redes {
+    background: linear-gradient(120deg, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.02));
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+    color: #212529 !important;
+}
+
+.modo-claro .boton-redes:hover {
+    background: linear-gradient(120deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.05));
 }
 
 button {
@@ -111,7 +134,16 @@ button:hover::before {
     cursor: pointer;
     box-shadow: 0 0 50px 20px rgba(0, 0, 0, .1);
     line-height: 1;
-  }
+}
+
+.modo-claro .toggle {
+    background-color: #212529;
+    box-shadow: 0 0 50px 20px rgba(0, 0, 0, .2);
+}
+
+.modo-claro .toggle .icon svg {
+    fill: #ffffff;
+}
   
 .input {
     display: none;

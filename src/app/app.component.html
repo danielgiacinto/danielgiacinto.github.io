@@ -1,6 +1,7 @@
 <div
   class="container-fluid pb-5"
-  [ngClass]="isDarkMode ? 'bg-dark' : 'fondo-degrade'"
+  [ngClass]="isDarkMode ? 'bg-dark' : 'bg-light'"
+  [class.modo-claro]="!isDarkMode"
   style="font-family: 'Onest'"
 >
   <div
@@ -35,6 +36,12 @@
               <span class="text"> Proyectos</span>
             </a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link fw-semibold color-header" href="#contact"
+              ><i class="bi bi-envelope-paper"></i>
+              <span class="text"> Contacto</span>
+            </a>
+          </li>
           <li>
             <a>
               <label class="toggle" for="switch">
@@ -42,6 +49,7 @@
                   id="switch"
                   class="input"
                   type="checkbox"
+                  [checked]="!isDarkMode"
                   (change)="toggleTheme()"
                 />
                 <div class="icon icon--moon">
@@ -91,7 +99,7 @@
               <div
                 class="col-md-5 col-sm-12 d-flex justify-content-md-end justify-content-center"
               >
-                <div class="card rounded-5 border-0 p-2 bg-dark bg-opacity-50">
+                <div class="card rounded-5 border-0 p-2" [ngClass]="isDarkMode ? 'bg-dark bg-opacity-50' : 'bg-light bg-opacity-50'">
                   <img
                     src="assets/avatar.png"
                     class="card-img-top img-fluid rounded-circle"
@@ -149,22 +157,25 @@
                 >
                   <ul class="list-unstyled m-0 p-0 d-flex flex-column gap-0">
                     <li
-                      class="mb-3 badge bg-dark bg-opacity-25 rounded-pill px-4 py-2 d-flex align-items-center justify-content-center"
+                      class="mb-3 badge rounded-pill px-4 py-2 d-flex align-items-center justify-content-center"
+                      [ngClass]="isDarkMode ? 'bg-dark bg-opacity-25' : 'bg-light bg-opacity-75'"
                     >
-                      <i class="bi bi-geo-alt-fill fs-5 text-white me-2"></i>
-                      <span class="text-white">Córdoba, Argentina</span>
+                      <i class="bi bi-geo-alt-fill fs-5 me-2" [ngClass]="isDarkMode ? 'text-white' : 'text-dark'"></i>
+                      <span [ngClass]="isDarkMode ? 'text-white' : 'text-dark'">Córdoba, Argentina</span>
                     </li>
                     <li
-                      class="mb-3 badge bg-dark bg-opacity-25 rounded-pill px-4 py-2 d-flex align-items-center justify-content-center"
+                      class="mb-3 badge rounded-pill px-4 py-2 d-flex align-items-center justify-content-center"
+                      [ngClass]="isDarkMode ? 'bg-dark bg-opacity-25' : 'bg-light bg-opacity-75'"
                     >
-                      <i class="bi bi-telephone-fill fs-5 text-white me-2"></i>
-                      <span class="text-white">+54 353 4067588</span>
+                      <i class="bi bi-telephone-fill fs-5 me-2" [ngClass]="isDarkMode ? 'text-white' : 'text-dark'"></i>
+                      <span [ngClass]="isDarkMode ? 'text-white' : 'text-dark'">+54 353 4067588</span>
                     </li>
-                                        <li
-                      class="mb-3 badge bg-dark bg-opacity-25 rounded-pill px-4 py-2 d-flex align-items-center justify-content-center"
+                    <li
+                      class="mb-3 badge rounded-pill px-4 py-2 d-flex align-items-center justify-content-center"
+                      [ngClass]="isDarkMode ? 'bg-dark bg-opacity-25' : 'bg-light bg-opacity-75'"
                     >
-                      <i class="bi bi-envelope-fill fs-5 text-white me-2"></i>
-                      <span class="text-white">danielgiacinto@gmail.com</span>
+                      <i class="bi bi-envelope-fill fs-5 me-2" [ngClass]="isDarkMode ? 'text-white' : 'text-dark'"></i>
+                      <span [ngClass]="isDarkMode ? 'text-white' : 'text-dark'">danielgiacinto@gmail.com</span>
                     </li>
                   </ul>
                 </div>
@@ -174,8 +185,9 @@
           <div class="row d-flex justify-content-center align-items-center">
             <div class="col-md-10 p-2 mt-3">
               <div
-                class="card rounded-5 border-0 bg-dark bg-opacity-25 text-md-start text-center"
-                style="background-color: #434343"
+                class="card rounded-5 border-0 text-md-start text-center"
+                [ngClass]="isDarkMode ? 'bg-dark bg-opacity-25' : 'bg-light bg-opacity-75'"
+                [style.background-color]="isDarkMode ? '#434343' : '#f8f9fa'"
               >
                 <div class="row gap-4 p-3">
                   <div class="text-center col-12 col-md">
@@ -183,7 +195,7 @@
                       class="bi bi-mortarboard-fill"
                       style="font-size: 2rem; color: #0dcaf0"
                     ></i>
-                    <div class="fw-semibold text-white mt-2">
+                    <div class="fw-semibold mt-2" [ngClass]="isDarkMode ? 'text-white' : 'text-dark'">
                       Técnico en Programación
                     </div>
                   </div>
@@ -192,7 +204,7 @@
                       class="bi bi-clock-history"
                       style="font-size: 2rem; color: #0dcaf0"
                     ></i>
-                    <div class="fw-semibold text-white mt-2">
+                    <div class="fw-semibold mt-2" [ngClass]="isDarkMode ? 'text-white' : 'text-dark'">
                       +3 años de experiencia
                     </div>
                   </div>
@@ -201,7 +213,7 @@
                       class="bi bi-lightning-charge-fill"
                       style="font-size: 2rem; color: #0dcaf0"
                     ></i>
-                    <div class="fw-semibold text-white mt-2">
+                    <div class="fw-semibold mt-2" [ngClass]="isDarkMode ? 'text-white' : 'text-dark'">
                       Full Stack Developer
                     </div>
                   </div>
@@ -213,16 +225,16 @@
       </div>
     </div>
     <div class="col-lg-8 col-sm-12 col-xs-12 mt-5">
-      <div id="experience" class="mt-5 pb-5">
+      <div id="experience" class="mt-5 pb-5" appScrollAnimation>
         <app-experience></app-experience>
       </div>
-      <div id="education" class="mt-5 pb-5">
+      <div id="education" class="mt-5 pb-5" appScrollAnimation>
         <app-education></app-education>
       </div>
-      <div id="skills" class="mt-5 pb-5">
+      <div id="skills" class="mt-5 pb-5" appScrollAnimation>
         <app-skills></app-skills>
       </div>
-      <div id="projects" class="mt-5 pb-5">
+      <div id="projects" class="mt-5 pb-5" appScrollAnimation>
         <app-projects></app-projects>
       </div>
     </div>

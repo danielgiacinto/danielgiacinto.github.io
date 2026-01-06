@@ -49,6 +49,19 @@
   box-shadow: 0 0 16px 2px #0dcaf0, 0 4px 24px 0 rgba(13,202,240,0.18);
   border-color: #0dcaf0;
 }
+
+.modo-claro .card-edu {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(248, 249, 250, 0.9)) !important;
+  border: 2px solid rgba(13, 202, 240, 0.2) !important;
+  box-shadow: 0 4px 20px 0 rgba(13, 202, 240, 0.15), 0 2px 8px 0 rgba(13, 202, 240, 0.1) !important;
+}
+
+.modo-claro .card-edu:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 20px 4px rgba(13, 202, 240, 0.3), 0 8px 32px 0 rgba(13, 202, 240, 0.2) !important;
+  border-color: #0dcaf0 !important;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 1), rgba(248, 249, 250, 0.95)) !important;
+}
 .edu-icon {
   font-size: 2.2rem;
   color: #0dcaf0;

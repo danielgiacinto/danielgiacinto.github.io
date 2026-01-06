@@ -7,6 +7,7 @@ import { ExperienceComponent } from './components/experience/experience.componen
 import { ProjectsComponent } from './components/projects/projects.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { EducationComponent } from './components/education/education.component';
+import { ScrollAnimationDirective } from './directives/scroll-animation.directive';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { EducationComponent } from './components/education/education.component';
     ExperienceComponent,
     ProjectsComponent,
     SkillsComponent,
-    EducationComponent
+    EducationComponent,
+    ScrollAnimationDirective
   ],
   imports: [
     BrowserModule,
