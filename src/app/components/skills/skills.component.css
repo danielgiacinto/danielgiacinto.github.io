@@ -119,3 +119,100 @@
 .animacion:hover{
     transform: scale(1.08);
 }
+
+/* Estilos para alinear iconos y texto */
+.efecto-habilidad ul {
+    min-height: 200px;
+    padding: 1rem 0;
+}
+
+.efecto-habilidad li {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    min-width: 80px;
+    width: 80px;
+    margin: 0 !important;
+    padding: 0 !important;
+    gap: 0;
+}
+
+.efecto-habilidad li svg,
+.efecto-habilidad li img {
+    width: 50px !important;
+    height: 50px !important;
+    min-width: 50px !important;
+    min-height: 50px !important;
+    max-width: 50px !important;
+    max-height: 50px !important;
+    object-fit: contain;
+    display: block !important;
+    margin: 0 auto !important;
+    flex-shrink: 0;
+    padding: 0;
+}
+
+.efecto-habilidad li p {
+    margin: 8px 0 0 0 !important;
+    padding: 0 !important;
+    text-align: center !important;
+    font-size: 0.875rem;
+    line-height: 1.2;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Asegurar que las cards tengan altura similar */
+.col.d-flex {
+    display: flex;
+}
+
+.efecto-habilidad {
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.efecto-habilidad .col-md-12 {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .efecto-habilidad {
+        min-height: 300px;
+    }
+    
+    .efecto-habilidad ul {
+        gap: 2rem !important;
+        min-height: 150px;
+    }
+    
+    .efecto-habilidad li {
+        min-width: 70px;
+        width: 70px;
+    }
+    
+    .efecto-habilidad li svg,
+    .efecto-habilidad li img {
+        width: 45px !important;
+        height: 45px !important;
+        min-width: 45px !important;
+        min-height: 45px !important;
+        max-width: 45px !important;
+        max-height: 45px !important;
+    }
+    
+    .efecto-habilidad li p {
+        font-size: 0.75rem;
+    }
+}

@@ -14,92 +14,90 @@
         <div class="timeline">
             <!-- CUOS Software Experience -->
             <div class="timeline-item">
-              <div class="timeline-icon">
-                <i class="bi bi-laptop"></i>
+              <div class="timeline-icon timeline-icon-cuos">
+                <img src="https://media.licdn.com/dms/image/v2/D4D0BAQFfjJxWnIEq1A/company-logo_200_200/company-logo_200_200/0/1726757411275/cuos_logo?e=1770854400&v=beta&t=YBfBMq5KfGQNPiTiUdDTaEUQtzHP96mK5y8vVd6evpc" alt="CUOS Logo" class="company-logo">
               </div>
               <div class="ps-4 mb-5">
                 <h3 class="fw-bold fs-4 text-start text-white">Full Stack Developer - <span class="fs-5" style="color: #0dcaf0;">CUOS Software · Córdoba, Argentina</span></h3>
                 <p class="fw-light text-white">Junio 2025 - Actualidad</p>
                 <ul class="fw-light text-white experience-list" style="text-align: justify;">
-                  <li>Desarrollo y mantenimiento de aplicaciones web utilizando <b>.NET</b>, <b>C#</b>, <b>Angular</b>, <b>Vue.js</b>, <b>SQL</b>, entre otros, Corrigiendo errores y creando nuevos componentes y funcionalidades.</li>
-                  <li>Gestión y manejo de Consultas, Procedures en bases de datos con <b>ORACLE</b>.</li>
-                  <li>Consumo y manejo de <b>APIs</b> RESTful, realizando pruebas y validaciones con <b>Postman</b>.</li>
-                  <li>Desarrollo de varios proyectos en simultaneo con diferentes lenguajes y frameworks.</li>
+                  <li *ngFor="let item of cuosItems.slice(0, isExpanded('cuos') ? cuosItems.length : 4)" [innerHTML]="item"></li>
                 </ul>
+                <button *ngIf="cuosItems.length > 4" class="btn btn-link text-info p-0 mt-2 fw-light" (click)="toggleExperience('cuos')" style="text-decoration: none;">
+                  <i class="bi" [ngClass]="isExpanded('cuos') ? 'bi-chevron-up' : 'bi-chevron-down'"></i>
+                  {{ isExpanded('cuos') ? 'Ver menos' : 'Ver más' }}
+                </button>
               </div>
             </div>
           <!-- Epam Experience -->
           <div class="timeline-item">
-            <div class="timeline-icon">
-              <i class="bi bi-lightbulb"></i>
+            <div class="timeline-icon timeline-icon-epam">
+              <img src="https://media.licdn.com/dms/image/v2/D4D0BAQGd7yeYsBtfzw/company-logo_200_200/B4DZuc0QBQH4AI-/0/1767862501956/epam_systems_logo?e=1770854400&v=beta&t=ylGPVOwEDi5NQKee7FOeeFFht16wwE_LyuNfmd99JOc" alt="EPAM Logo" class="company-logo">
             </div>
             <div class="ps-4 mb-5">
-              <h3 class="fw-bold fs-4 text-start text-white">Tester QA - <span class="fs-5" style="color: #0dcaf0;">Epam Systems & Claro · Córdoba, Argentina</span></h3>
-                <p class="fw-light text-white">Noviembre 2024 - Mayo 2025 ( 7 meses )</p>
+              <h3 class="fw-bold fs-4 text-start text-white">Analista Tester QA - <span class="fs-5" style="color: #0dcaf0;">Epam Systems & Claro · Córdoba, Argentina</span></h3>
+                <p class="fw-light text-white">Noviembre 2024 - Junio 2025 ( 8 meses )</p>
               <ul class="fw-light text-white experience-list" style="text-align: justify;">
-                <li>Gestioné implementaciones en entornos de prueba y producción.</li>
-                <li>Diseñé y ejecuté casos de prueba utilizando Jira.</li>
-                <li>Realicé pruebas exhaustivas probando funcionalidades en bases de datos.</li>
-                <li>Documenté evidencias y hallazgos en Confluence.</li>
-                <li>Ejecuté procesos automatizados a través de Jenkins.</li>
-                <li>Realicé controles de posproducción para garantizar la estabilidad del sistema.</li>
-                <li>Gestioné bases de datos, definí y ejecuté consultas en SQL.</li>
-                <li>Analicé y resolví errores de código de manera eficiente.</li>
-                <li>Realicé migración de procesos en el lenguaje Java y usé Bitbucket como control de versiones.</li>
-                <li>Utilicé Postman para verificar las respuestas de la API.</li>
+                <li *ngFor="let item of epamItems.slice(0, isExpanded('epam') ? epamItems.length : 4)">{{ item }}</li>
               </ul>
+              <button *ngIf="epamItems.length > 4" class="btn btn-link text-info p-0 mt-2 fw-light" (click)="toggleExperience('epam')" style="text-decoration: none;">
+                <i class="bi" [ngClass]="isExpanded('epam') ? 'bi-chevron-up' : 'bi-chevron-down'"></i>
+                {{ isExpanded('epam') ? 'Ver menos' : 'Ver más' }}
+              </button>
             </div>
           </div>
 
           <!-- Vates Experience -->
           <div class="timeline-item">
-            <div class="timeline-icon">
-              <i class="bi bi-code-slash"></i>
+            <div class="timeline-icon timeline-icon-vates">
+              <img src="https://media.licdn.com/dms/image/v2/D4D0BAQEOeBmrtYBEbw/company-logo_200_200/company-logo_200_200/0/1711464819079/vates_logo?e=1770854400&v=beta&t=j2p5Id5tq8XSwZH9Gb46_CXSGzV2myFnOVeHYg91O5w" alt="Vates Logo" class="company-logo">
             </div>
             <div class="ps-4 mb-5">
               <h3 class="fw-bold fs-4 text-start text-white">Desarrollador de Software .Net - <span class="fs-5" style="color: #0dcaf0;">Vates · Córdoba, Argentina</span></h3>
               <p class="fw-light text-white">Septiembre 2023 - Octubre 2024 ( 1 año y 4 meses )</p>
               <ul class="fw-light text-white experience-list" style="text-align: justify;">
-                <li>Diseñé y desarrollé soluciones de software utilizando C# .NET 7.0.</li>
-                <li>Utilicé Entity Framework para mapear objetos a tablas de bases de datos y realizar operaciones.</li>
-                <li>Implementé servicios RESTful utilizando ASP.NET Core y Swagger para documentar la API.</li>
-                <li>Utilicé LINQ para optimizar las consultas y manipular los datos de manera eficiente.</li>
-                <li>Establecí y mantuve conexiones de bases de datos con SQL Server.</li>
-                <li>Utilicé Git para controlar versiones y colaborar con otros desarrolladores.</li>
-                <li>Implementé Entity Framework utilizando los enfoques Database First y Code First para el modelado y acceso de datos.</li>
-                <li>Utilicé Postman para verificar las respuestas de la API.</li>
-                <li>Hice uso del patrón de diseño CQRS para la segregación de responsabilidades y un código más eficiente.</li>
+                <li *ngFor="let item of vatesItems.slice(0, isExpanded('vates') ? vatesItems.length : 4)">{{ item }}</li>
               </ul>
+              <button *ngIf="vatesItems.length > 4" class="btn btn-link text-info p-0 mt-2 fw-light" (click)="toggleExperience('vates')" style="text-decoration: none;">
+                <i class="bi" [ngClass]="isExpanded('vates') ? 'bi-chevron-up' : 'bi-chevron-down'"></i>
+                {{ isExpanded('vates') ? 'Ver menos' : 'Ver más' }}
+              </button>
             </div>
           </div>
 
           <!-- Toti Conti Experience -->
           <div class="timeline-item">
-            <div class="timeline-icon">
-              <i class="bi bi-people-fill"></i>
+            <div class="timeline-icon timeline-icon-toti">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYUpI81Iz4InMuMFoGwjhTHzyZ4CxmhwiiSA&s" alt="Toti Conti Logo" class="company-logo">
             </div>
             <div class="ps-4 mb-5">
               <h3 class="fw-bold fs-4 text-start text-white">Community Manager - <span class="fs-5" style="color: #0dcaf0;">Toti Conti S.A · Hernando, Córdoba, Argentina</span></h3>
               <p class="fw-light text-white">Julio 2021 - Enero 2023 ( 1 año y 7 meses )</p>
               <ul class="fw-light text-white experience-list" style="text-align: justify;">
-                <li>Diseño y creación de flyers para sus redes sociales, promocionando su marca y sus productos.</li>
-                <li>Usé herramientas como Photoshop y Canva para las publicaciones.</li>
+                <li *ngFor="let item of totiItems.slice(0, isExpanded('toti') ? totiItems.length : 4)">{{ item }}</li>
               </ul>
+              <button *ngIf="totiItems.length > 4" class="btn btn-link text-info p-0 mt-2 fw-light" (click)="toggleExperience('toti')" style="text-decoration: none;">
+                <i class="bi" [ngClass]="isExpanded('toti') ? 'bi-chevron-up' : 'bi-chevron-down'"></i>
+                {{ isExpanded('toti') ? 'Ver menos' : 'Ver más' }}
+              </button>
             </div>
           </div>
 
           <!-- Baiocco Menardi Experience -->
           <div class="timeline-item last">
-            <div class="timeline-icon">
+            <div class="timeline-icon timeline-icon-baiocco">
               <i class="bi bi-tools"></i>
             </div>
             <div class="ps-4">
               <h3 class="fw-bold fs-4 text-start text-white">Mantenimiento de Software y Hardware - <span class="fs-5" style="color: #0dcaf0;">Baiocco Menardi · Hernando, Córdoba, Argentina</span></h3>
               <p class="fw-light text-white">Agosto 2019 - Agosto 2020 ( 1 año )</p>
               <ul class="fw-light text-white experience-list" style="text-align: justify;">
-                <li>Tareas de mantenimiento, limpieza, instalación de programas y optimización de software en diversos dispositivos electrónicos.</li>
-                <li>Prestación de servicios a domicilio y atención al cliente.</li>
+                <li *ngFor="let item of baioccoItems.slice(0, isExpanded('baiocco') ? baioccoItems.length : 4)">{{ item }}</li>
               </ul>
+              <button *ngIf="baioccoItems.length > 4" class="btn btn-link text-info p-0 mt-2 fw-light" (click)="toggleExperience('baiocco')" style="text-decoration: none;">
+                <i class="bi" [ngClass]="isExpanded('baiocco') ? 'bi-chevron-up' : 'bi-chevron-down'"></i>
+                {{ isExpanded('baiocco') ? 'Ver menos' : 'Ver más' }}
+              </button>
             </div>
           </div>
         </div>

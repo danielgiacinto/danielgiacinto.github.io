@@ -29,14 +29,14 @@
 .timeline-item {
     position: relative;
     margin-bottom: 30px;
-    padding-left: 40px;
+    padding-left: 55px;
 }
   
 .timeline-item::before {
     content: '';
     position: absolute;
-    top: 35px; /* Comienza justo debajo del icono */
-    left: 16.5px;
+    top: 50px; /* Comienza justo debajo del icono */
+    left: 24.5px;
     width: 3px;
     height: 108%; /* Termina justo en el centro del siguiente icono */
     background-color: rgba(255, 255, 255, 0.1);
@@ -51,8 +51,8 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 35px;
-    height: 35px;
+    width: 50px;
+    height: 50px;
     background-color: #0dcaf0;
     color: white;
     border-radius: 50%;
@@ -62,6 +62,100 @@
     font-size: 1.2rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 1;
+    overflow: hidden;
+    padding: 3px;
+}
+
+.company-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+    background-color: transparent;
+}
+
+/* CUOS - Color morado/violeta basado en su logo */
+.timeline-icon-cuos {
+    background-color: #8764FA;
+    background: linear-gradient(135deg, #8764FA 0%, #6B46C1 100%);
+}
+
+/* EPAM - Color azul verdoso basado en su logo */
+.timeline-icon-epam {
+    background-color: #39C2D7;
+    background: linear-gradient(135deg, #39C2D7 0%, #2A9DB8 100%);
+}
+
+/* Vates - Color azul basado en su logo */
+.timeline-icon-vates {
+    background-color: #1E40AF;
+    background: linear-gradient(135deg, #1E40AF 0%, #1E3A8A 100%);
+}
+
+/* Toti Conti - Color rojo similar al logo */
+.timeline-icon-toti {
+    background-color: #DC2626;
+    background: linear-gradient(135deg, #EF4444 0%, #DC2626 100%);
+}
+
+/* Baiocco Menardi - Color verde para diferenciarlo */
+.timeline-icon-baiocco {
+    background-color: #10B981;
+    background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+}
+
+/* Modo claro - Ajustes para los logos */
+.modo-claro .timeline-icon {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.modo-claro .timeline-icon-cuos {
+    background: linear-gradient(135deg, #9B7DFF 0%, #7C5BCF 100%);
+}
+
+.modo-claro .timeline-icon-epam {
+    background: linear-gradient(135deg, #4DD4E8 0%, #3BB5C9 100%);
+}
+
+.modo-claro .timeline-icon-vates {
+    background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
+}
+
+.modo-claro .timeline-icon-toti {
+    background: linear-gradient(135deg, #F87171 0%, #EF4444 100%);
+}
+
+.modo-claro .timeline-icon-baiocco {
+    background: linear-gradient(135deg, #34D399 0%, #10B981 100%);
+}
+
+/* Estilos para botones Ver más/Ver menos */
+.btn-link.text-info {
+    color: #0dcaf0 !important;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.btn-link.text-info:hover {
+    color: #0aa2c0 !important;
+    transform: translateX(3px);
+}
+
+.btn-link.text-info i {
+    margin-right: 5px;
+    transition: transform 0.3s ease;
+}
+
+.btn-link.text-info:hover i {
+    transform: translateY(2px);
+}
+
+.modo-claro .btn-link.text-info {
+    color: #0dcaf0 !important;
+}
+
+.modo-claro .btn-link.text-info:hover {
+    color: #0aa2c0 !important;
 }
   
   

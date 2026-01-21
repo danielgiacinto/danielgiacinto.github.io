@@ -236,7 +236,39 @@
       </div>
       <div id="projects" class="mt-5 pb-5" appScrollAnimation>
         <app-projects></app-projects>
-      </div>`
+      </div>
+    </div>
+  </div>
+
+  <!-- Botón Scroll to Top -->
+  <button 
+    *ngIf="showScrollTop"
+    (click)="scrollToTop()"
+    class="scroll-to-top"
+    [class.modo-claro]="!isDarkMode"
+    aria-label="Volver arriba"
+    title="Volver arriba">
+    <i class="bi bi-arrow-up-circle-fill"></i>
+  </button>
+</div>
+
+<!-- Video de Ciriu Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content rounded-5 border-0 bg-dark">
+      <div class="modal-header border-0 pb-2">
+        <h1 class="modal-title fs-5 text-white" id="exampleModalLabel">Proyecto Práctica Supervisada - Ecommerce Ciriú</h1>
+        <button type="button" class="btn-close btn-close-white pe-4" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body border-0 p-0">
+        <div class="ratio ratio-16x9">
+          <iframe src="https://www.youtube.com/embed/CrgORz2ZPo8" 
+            title="Proyecto Ecommerce Ciriú" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
     </div>
   </div>
 </div>

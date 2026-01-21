@@ -86,7 +86,7 @@
     background: linear-gradient(120deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.05));
 }
 
-button {
+button:not(.btn-close) {
     border: unset;
     border-radius: 15px;
     color: #212121;
@@ -101,7 +101,7 @@ button {
     overflow: hidden;
 }
    
-button::before {
+button:not(.btn-close)::before {
     content: "";
     position: absolute;
     top: 0;
@@ -116,11 +116,11 @@ button::before {
     transition: all 350ms
 }
    
-button:hover {
+button:not(.btn-close):hover {
     color: #e8e8e8;
 }
-   
-button:hover::before {
+
+button:not(.btn-close):hover::before {
     width: 100%;
 }
 
@@ -175,5 +175,131 @@ button:hover::before {
 @media (max-width: 768px) {
     .nav-item .nav-link .text {
       display: none; /* Oculta el texto */
+    }
+}
+
+/* Botón Scroll to Top */
+.scroll-to-top {
+    position: fixed !important;
+    bottom: 30px !important;
+    right: 30px !important;
+    left: auto !important;
+    width: 50px !important;
+    height: 50px !important;
+    background: rgba(13, 202, 240, 0.8) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.2) !important;
+    border-radius: 50% !important;
+    color: white !important;
+    font-size: 1.8rem !important;
+    cursor: pointer;
+    z-index: 1000;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(13, 202, 240, 0.4) !important;
+    transition: all 0.3s ease;
+    animation: fadeInUp 0.5s ease, bounce 2s infinite 0.5s;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+    margin: 0 !important;
+    padding: 0 !important;
+    min-width: 50px !important;
+    min-height: 50px !important;
+    max-width: 50px !important;
+    max-height: 50px !important;
+    line-height: 1 !important;
+    box-sizing: border-box !important;
+}
+
+.scroll-to-top:hover {
+    background: rgba(13, 202, 240, 1);
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 6px 20px rgba(13, 202, 240, 0.6);
+    border-color: rgba(255, 255, 255, 0.4);
+    animation: none;
+}
+
+.scroll-to-top i {
+    transition: transform 0.3s ease;
+}
+
+.scroll-to-top:hover i {
+    transform: translateY(-3px);
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Modo claro para el botón scroll to top */
+.modo-claro .scroll-to-top {
+    background: rgba(13, 202, 240, 0.9) !important;
+    border: 2px solid rgba(13, 202, 240, 0.3) !important;
+    box-shadow: 0 4px 15px rgba(13, 202, 240, 0.3) !important;
+    width: 50px !important;
+    height: 50px !important;
+    font-size: 1.8rem !important;
+    border-radius: 50% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    min-width: 50px !important;
+    min-height: 50px !important;
+    max-width: 50px !important;
+    max-height: 50px !important;
+    line-height: 1 !important;
+}
+
+.modo-claro .scroll-to-top:hover {
+    background: rgba(13, 202, 240, 1) !important;
+    box-shadow: 0 6px 20px rgba(13, 202, 240, 0.5) !important;
+    border-color: rgba(13, 202, 240, 0.5) !important;
+    width: 50px !important;
+    height: 50px !important;
+}
+
+@media (max-width: 768px) {
+    .scroll-to-top {
+        bottom: 20px !important;
+        right: 20px !important;
+        left: auto !important;
+        width: 45px !important;
+        height: 45px !important;
+        font-size: 1.5rem !important;
+        min-width: 45px !important;
+        min-height: 45px !important;
+        max-width: 45px !important;
+        max-height: 45px !important;
+    }
+    
+    .modo-claro .scroll-to-top {
+        width: 45px !important;
+        height: 45px !important;
+        font-size: 1.5rem !important;
+        min-width: 45px !important;
+        min-height: 45px !important;
+        max-width: 45px !important;
+        max-height: 45px !important;
     }
 }
