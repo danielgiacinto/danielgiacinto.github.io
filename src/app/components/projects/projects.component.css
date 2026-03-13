@@ -1,3 +1,181 @@
+.projects-carousel-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  padding: 0 45px;
+}
+
+.projects-carousel {
+  display: flex;
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  width: 100%;
+}
+
+.projects-carousel-draggable {
+  cursor: grab;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.projects-carousel-draggable:active {
+  cursor: grabbing;
+}
+
+.project-card {
+  flex: 0 0 100%;
+  min-width: 100%;
+  padding: 0 0.75rem;
+  margin: 0 0.5rem;
+}
+
+.project-card .card {
+  min-height: 400px;
+  height: 100%;
+}
+
+@media (min-width: 992px) {
+  .project-card .card {
+    min-height: 420px;
+  }
+
+  .project-card .card .row {
+    min-height: 380px;
+  }
+}
+
+.projects-carousel-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+}
+
+.projects-carousel-wrapper:hover .projects-carousel-nav {
+  opacity: 1;
+}
+
+.projects-carousel-nav:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-50%) scale(1.05);
+}
+
+.projects-carousel-nav i {
+  font-size: 1.25rem;
+  color: #fff;
+}
+
+.projects-carousel-prev {
+  left: 4px;
+}
+
+.projects-carousel-next {
+  right: 4px;
+}
+
+.projects-carousel .card {
+  transition: none;
+}
+
+.projects-carousel .card.rounded-5.border-1.bg-dark.bg-opacity-50:hover {
+  transform: none !important;
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.1), 0 2px 8px 0 rgba(0, 0, 0, 0.06) !important;
+}
+
+.modo-claro .projects-carousel .card.rounded-5.border-1.bg-dark.bg-opacity-50:hover {
+  transform: none !important;
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.1), 0 2px 8px 0 rgba(0, 0, 0, 0.06) !important;
+}
+
+.projects-carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+.carousel-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.35);
+  cursor: pointer;
+  transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.carousel-dot:hover {
+  background: rgba(255, 255, 255, 0.55);
+}
+
+.carousel-dot.active {
+  background: #0dcaf0;
+  width: 24px;
+  border-radius: 4px;
+}
+
+.project-card .col-lg-5 {
+  min-height: 220px;
+  display: flex;
+  align-items: center;
+}
+
+.project-icon-placeholder {
+  min-height: 220px;
+  width: 100%;
+  max-width: 280px;
+  background: linear-gradient(135deg, rgba(55, 118, 171, 0.3), rgba(55, 118, 171, 0.15));
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 20px rgba(55, 118, 171, 0.2);
+}
+
+.modo-claro .projects-carousel-nav {
+  background: rgba(0, 0, 0, 0.08);
+  border-color: rgba(0, 0, 0, 0.12);
+}
+
+.modo-claro .projects-carousel-nav:hover {
+  background: rgba(0, 0, 0, 0.12);
+}
+
+.modo-claro .projects-carousel-nav i {
+  color: #212529;
+}
+
+.modo-claro .carousel-dot {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.modo-claro .carousel-dot:hover {
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.modo-claro .carousel-dot.active {
+  background: #0dcaf0;
+}
+
+.modo-claro .project-icon-placeholder {
+  background: linear-gradient(135deg, rgba(55, 118, 171, 0.15), rgba(55, 118, 171, 0.08));
+  border-color: rgba(0, 0, 0, 0.08);
+}
+
+.modo-claro .project-icon-placeholder i {
+  color: #3776ab !important;
+}
+
 .efecto-vidrio {
     background: linear-gradient(120deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
     backdrop-filter: blur(30px);
@@ -11,12 +189,6 @@
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(248, 249, 250, 0.9)) !important;
     border: 1px solid rgba(0, 0, 0, 0.1) !important;
     box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.1), 0 2px 8px 0 rgba(0, 0, 0, 0.06) !important;
-    transition: all 0.3s ease !important;
-}
-
-.modo-claro .card.rounded-5.border-1.bg-dark.bg-opacity-50:hover {
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.15), 0 4px 12px 0 rgba(0, 0, 0, 0.1) !important;
-    transform: translateY(-2px);
 }
 
 
