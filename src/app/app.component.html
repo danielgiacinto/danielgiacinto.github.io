@@ -13,25 +13,25 @@
           class="card efecto-vidrio d-flex flex-row rounded-5 border-0 p-2 ps-4 pe-4 justify-content-center align-items-center gap-4 list-unstyled m-auto"
         >
           <li class="nav-item">
-            <a class="nav-link fw-semibold color-header" href="#experience"
+            <a class="nav-link fw-semibold color-header" href="#experience" [class.activo]="seccionActiva === 'experience'"
               ><i class="bi bi-person-workspace"></i>
               <span class="text"> Experiencia</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link fw-semibold color-header" href="#education"
+            <a class="nav-link fw-semibold color-header" href="#education" [class.activo]="seccionActiva === 'education'"
               ><i class="bi bi-mortarboard"></i>
               <span class="text"> Educación</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link fw-semibold color-header" href="#skills"
+            <a class="nav-link fw-semibold color-header" href="#skills" [class.activo]="seccionActiva === 'skills'"
               ><i class="bi bi-heart"></i>
               <span class="text"> Habilidades</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link fw-semibold color-header" href="#projects"
+            <a class="nav-link fw-semibold color-header" href="#projects" [class.activo]="seccionActiva === 'projects'"
               ><i class="bi bi-code-slash"></i>
               <span class="text"> Proyectos</span>
             </a>
@@ -44,7 +44,7 @@
           </li> -->
           <li>
             <a>
-              <label class="toggle" for="switch">
+              <label class="toggle" for="switch" aria-label="Cambiar entre modo claro y oscuro">
                 <input
                   id="switch"
                   class="input"
@@ -94,6 +94,7 @@
               <h3 class="fw-bold display-5 text-center nombre-animado">
                 Daniel José Giacinto
               </h3>
+              <p class="rol-principal text-center mb-0">Full Stack Developer</p>
             </div>
             <div class="row mt-3 align-items-center justify-content-center">
               <div
@@ -102,8 +103,8 @@
                 <div class="card rounded-5 border-0 p-2" [ngClass]="isDarkMode ? 'bg-dark bg-opacity-50' : 'bg-light bg-opacity-50'">
                   <img
                     src="assets/avatar.png"
-                    class="card-img-top img-fluid rounded-circle"
-                    style="width: 200px; height: 200px; object-fit: cover"
+                    alt="Foto de Daniel José Giacinto"
+                    class="card-img-top img-fluid rounded-circle foto-perfil"
                   />
                 </div>
               </div>
@@ -116,8 +117,10 @@
                       <a
                         class="btn btn-dark rounded-5 fs-6 border-1 boton-redes"
                         href="https://www.linkedin.com/in/danielgiacinto/"
-                        title="Linkedin"
+                        title="LinkedIn"
+                        aria-label="LinkedIn"
                         target="_blank"
+                        rel="noopener noreferrer"
                         role="button"
                         ><i class="bi bi-linkedin"></i>
                       </a>
@@ -126,8 +129,10 @@
                       <a
                         class="btn btn-dark rounded-5 fs-6 border-1 boton-redes"
                         href="https://github.com/danielgiacinto"
-                        title="Github"
+                        title="GitHub"
+                        aria-label="GitHub"
                         target="_blank"
+                        rel="noopener noreferrer"
                         role="button"
                         ><i class="bi bi-github"></i>
                       </a>
@@ -135,9 +140,9 @@
                     <li class="nav-item">
                       <a
                         class="btn btn-dark rounded-5 fs-6 border-1 boton-redes"
-                        href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=CllgCJvqslhZFQZbXQdmJPzvqLwpSjFvLldKPnkHzbqzXXgXDJDdBfZqGjDbnsTJbbhgxZPJPTg"
+                        href="mailto:danielgiacinto@gmail.com"
                         title="Correo"
-                        target="_blank"
+                        aria-label="Enviar correo"
                         role="button"
                         ><i class="bi bi-envelope-fill"></i>
                       </a>
@@ -145,8 +150,11 @@
                     <li class="nav-item">
                       <a
                         class="btn btn-dark rounded-5 fs-6 border-1 boton-redes"
-                        (click)="openCV()"
+                        href="assets/cv.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         title="Curriculum"
+                        aria-label="Abrir curriculum"
                         ><i class="bi bi-file-earmark-person-fill"></i>
                       </a>
                     </li>
@@ -160,22 +168,28 @@
                       class="mb-3 badge rounded-pill px-4 py-2 d-flex align-items-center justify-content-center"
                       [ngClass]="isDarkMode ? 'bg-dark bg-opacity-25' : 'bg-light bg-opacity-75'"
                     >
-                      <i class="bi bi-geo-alt-fill fs-5 me-2" [ngClass]="isDarkMode ? 'text-white' : 'text-dark'"></i>
-                      <span [ngClass]="isDarkMode ? 'text-white' : 'text-dark'">Córdoba, Argentina</span>
+                      <span class="enlace-dato" [ngClass]="isDarkMode ? 'text-white' : 'text-dark'">
+                        <i class="bi bi-geo-alt-fill fs-5 me-2"></i>
+                        <span>Córdoba, Argentina</span>
+                      </span>
                     </li>
                     <li
                       class="mb-3 badge rounded-pill px-4 py-2 d-flex align-items-center justify-content-center"
                       [ngClass]="isDarkMode ? 'bg-dark bg-opacity-25' : 'bg-light bg-opacity-75'"
                     >
-                      <i class="bi bi-telephone-fill fs-5 me-2" [ngClass]="isDarkMode ? 'text-white' : 'text-dark'"></i>
-                      <span [ngClass]="isDarkMode ? 'text-white' : 'text-dark'">+54 353 4067588</span>
+                      <a class="enlace-dato" [ngClass]="isDarkMode ? 'text-white' : 'text-dark'" href="tel:+543534067588">
+                        <i class="bi bi-telephone-fill fs-5 me-2"></i>
+                        <span>+54 353 4067588</span>
+                      </a>
                     </li>
                     <li
                       class="mb-3 badge rounded-pill px-4 py-2 d-flex align-items-center justify-content-center"
                       [ngClass]="isDarkMode ? 'bg-dark bg-opacity-25' : 'bg-light bg-opacity-75'"
                     >
-                      <i class="bi bi-envelope-fill fs-5 me-2" [ngClass]="isDarkMode ? 'text-white' : 'text-dark'"></i>
-                      <span [ngClass]="isDarkMode ? 'text-white' : 'text-dark'">danielgiacinto@gmail.com</span>
+                      <a class="enlace-dato" [ngClass]="isDarkMode ? 'text-white' : 'text-dark'" href="mailto:danielgiacinto@gmail.com">
+                        <i class="bi bi-envelope-fill fs-5 me-2"></i>
+                        <span>danielgiacinto@gmail.com</span>
+                      </a>
                     </li>
                   </ul>
                 </div>
@@ -239,6 +253,12 @@
       </div>
     </div>
   </div>
+
+  <footer class="pie text-center">
+    <p class="fw-semibold mb-2" [ngClass]="isDarkMode ? 'text-white' : 'text-dark'">¿Armamos algo juntos?</p>
+    <a class="enlace-pie" href="mailto:danielgiacinto@gmail.com">danielgiacinto@gmail.com</a>
+    <p class="mb-0 mt-3 small" [ngClass]="isDarkMode ? 'text-white' : 'text-secondary'">© 2026 Daniel José Giacinto · Córdoba, Argentina</p>
+  </footer>
 
   <!-- Botón Scroll to Top -->
   <button 

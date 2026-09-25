@@ -38,6 +38,58 @@
     color: #000000;
 }
 
+.color-header.activo,
+.modo-claro .color-header.activo {
+    color: #0dcaf0;
+}
+
+.rol-principal {
+    color: #0dcaf0;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    margin-top: 0.35rem;
+}
+
+.modo-claro .nombre-animado {
+    background-image: linear-gradient(90deg, #087990, #212529, #087990);
+}
+
+.foto-perfil {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border: 3px solid rgba(13, 202, 240, 0.9);
+    box-shadow: 0 10px 28px rgba(13, 202, 240, 0.28);
+}
+
+.enlace-dato {
+    color: inherit;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.enlace-dato:hover,
+.enlace-dato:focus-visible {
+    color: #0dcaf0;
+}
+
+.pie {
+    padding: 2.5rem 1rem 0.5rem;
+}
+
+.enlace-pie {
+    color: #0dcaf0;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.enlace-pie:hover,
+.enlace-pie:focus-visible {
+    text-decoration: underline;
+}
+
 .efecto-vidrio {
     background: rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(40px) saturate(180%);
@@ -200,7 +252,7 @@ button:not(.btn-close):hover::before {
     justify-content: center;
     box-shadow: 0 4px 15px rgba(13, 202, 240, 0.4) !important;
     transition: all 0.3s ease;
-    animation: fadeInUp 0.5s ease, bounce 2s infinite 0.5s;
+    animation: fadeInUp 0.5s ease;
     opacity: 1;
     transform: translateY(0);
     pointer-events: auto;

@@ -73,6 +73,12 @@
   transform: translateY(-50%) scale(1.05);
 }
 
+@media (max-width: 991px) {
+  .projects-carousel-nav {
+    opacity: 1;
+  }
+}
+
 .projects-carousel-nav i {
   font-size: 1.25rem;
   color: #fff;

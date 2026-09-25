@@ -32,6 +32,19 @@
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
+@media (prefers-reduced-motion: reduce) {
+    [appScrollAnimation] {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    .nombre-animado,
+    .scroll-to-top {
+        animation: none !important;
+    }
+}
+
 [appScrollAnimation].scroll-animate {
     opacity: 1;
     transform: translateY(0);
