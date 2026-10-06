@@ -1,0 +1,49 @@
+:host {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+  line-height: 1;
+  vertical-align: baseline;
+}
+
+.medida {
+  display: inline-block;
+  font-family: "TikTok Sans", sans-serif;
+  font-weight: 620;
+  font-stretch: 118%;
+  font-size: min(3.35rem, 6.2vw);
+  letter-spacing: -0.045em;
+  line-height: 1.05;
+  white-space: nowrap;
+  transition: opacity 0.45s ease, filter 0.55s ease;
+}
+
+.medida.desaparece {
+  opacity: 0;
+  filter: blur(12px);
+}
+
+.lienzo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.28s ease;
+}
+
+.lienzo.visible {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .medida,
+  .lienzo {
+    transition: none;
+  }
+
+  .medida.desaparece {
+    opacity: 1;
+    filter: none;
+  }
+}

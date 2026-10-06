@@ -1,6 +1,109 @@
+.lista-proyectos {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  transform: none !important;
+}
+
+.lista-proyectos .project-card {
+  flex: none;
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+}
+
+.projects-carousel-nav,
+.projects-carousel-dots {
+  display: none !important;
+}
+
+.proyecto-plano {
+  padding-bottom: 0.5rem;
+}
+
+.proyecto-grilla {
+  --bs-gutter-x: 3.25rem;
+  --bs-gutter-y: 0;
+  align-items: flex-start;
+}
+
+.proyecto-media {
+  display: flex;
+  align-items: flex-start;
+  padding-right: 0.35rem;
+}
+
+.proyecto-media img,
+.proyecto-media .project-icon-placeholder {
+  width: 100%;
+  margin: 0;
+}
+
+.proyecto-info .card-body {
+  padding: 0 0 0 0.85rem;
+}
+
+.proyecto-detalle {
+  margin-top: 1.35rem;
+  padding-left: 0.85rem;
+}
+
+.proyecto-detalle p {
+  text-align: start;
+  line-height: 1.7;
+  margin-bottom: 1.25rem;
+}
+
+.acciones-proyecto {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.acciones-proyecto .btn {
+  white-space: nowrap;
+  flex: 0 0 auto;
+}
+
+@media (max-width: 575.98px) {
+  .acciones-proyecto {
+    gap: 0.35rem;
+  }
+
+  .acciones-proyecto .btn {
+    padding: 0.35rem 0.65rem;
+    font-size: 0.82rem;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .proyecto-grilla {
+    --bs-gutter-x: 1.25rem;
+  }
+
+  .proyecto-media {
+    margin-bottom: 1.25rem;
+  }
+
+  .proyecto-media {
+    padding-right: 0;
+  }
+
+  .proyecto-info .card-body,
+  .proyecto-detalle {
+    padding-left: 0;
+  }
+
+  .proyecto-detalle {
+    margin-top: 1.15rem;
+  }
+}
+
 .projects-carousel-wrapper {
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   border-radius: 20px;
   padding: 0 12px;
 }
@@ -196,101 +299,4 @@
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(248, 249, 250, 0.9)) !important;
     border: 1px solid rgba(0, 0, 0, 0.1) !important;
     box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.1), 0 2px 8px 0 rgba(0, 0, 0, 0.06) !important;
-}
-
-
-/* Estilos para el modal de Bootstrap */
-#exampleModal.modal {
-    z-index: 9999 !important;
-    overflow-x: hidden;
-    overflow-y: auto;
-}
-
-#exampleModal.modal.show {
-    display: block !important;
-    padding-right: 0 !important;
-}
-
-.modal-backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 9998 !important;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.7) !important;
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-}
-
-.modal-backdrop.show {
-    opacity: 0.5 !important;
-}
-
-#exampleModal .modal-dialog {
-    z-index: 10000 !important;
-    margin: 1.75rem auto;
-    pointer-events: auto;
-    position: relative;
-    max-width: 90%;
-}
-
-#exampleModal .modal-content {
-    z-index: 10001 !important;
-    background-color: #212529 !important;
-    border: 1px solid rgba(255, 255, 255, 0.1) !important;
-    pointer-events: auto;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
-
-#exampleModal .modal-body {
-    padding: 0 !important;
-    overflow: hidden;
-    pointer-events: auto;
-    position: relative;
-}
-
-#exampleModal .modal-body .ratio {
-    border-radius: 0 0 1.5rem 1.5rem;
-    overflow: hidden;
-    pointer-events: auto;
-    position: relative;
-}
-
-#exampleModal .modal-body iframe {
-    border: none;
-    border-radius: 0 0 1.5rem 1.5rem;
-    pointer-events: auto;
-    position: relative;
-    z-index: 1;
-}
-
-#exampleModal .modal-header {
-    padding: 1rem 1rem 0.5rem 1rem;
-    pointer-events: auto;
-    position: relative;
-    z-index: 10002;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-#exampleModal .modal-header .btn-close {
-    pointer-events: auto !important;
-}
-
-/* Modo claro para el modal */
-.modo-claro #exampleModal .modal-content {
-    background-color: #ffffff !important;
-    border: 1px solid rgba(0, 0, 0, 0.1) !important;
-}
-
-.modo-claro #exampleModal .modal-header {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-
-.modo-claro #exampleModal .modal-title {
-    color: #212529 !important;
 }

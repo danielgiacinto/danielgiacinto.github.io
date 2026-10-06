@@ -1,7 +1,7 @@
-<div class="col-md-12 pt-5 pb-5" style="font-family: 'Onest';">
+<div class="col-md-12 pt-5 pb-5">
   <div class="">
     <div class="mt-4 mb-4 d-flex justify-content-center">
-      <h2 class="text-white fw-bold"><i class="bi bi-code-slash"></i> Proyectos</h2>
+      <h2 class="text-white fw-bold titulo-seccion" appTextoHover><i class="bi bi-code-slash"></i> Proyectos</h2>
     </div>
     <div class="projects-carousel-wrapper">
         <div class="projects-carousel-nav projects-carousel-prev" *ngIf="currentProjectIndex > 0" (click)="prevProject()" (keydown.enter)="prevProject()" role="button" tabindex="0" aria-label="Proyecto anterior">
@@ -10,24 +10,19 @@
         <div class="projects-carousel-nav projects-carousel-next" *ngIf="currentProjectIndex < totalProjects - 1" (click)="nextProject()" (keydown.enter)="nextProject()" role="button" tabindex="0" aria-label="Proyecto siguiente">
           <i class="bi bi-chevron-right"></i>
         </div>
-        <div class="projects-carousel projects-carousel-draggable"
-             [style.transform]="'translateX(-' + (currentProjectIndex * 100) + '%)'"
-             (touchstart)="onTouchStart($event)"
-             (touchend)="onTouchEnd($event)"
-             (mousedown)="onMouseDown($event)"
-             (mouseleave)="onMouseLeave()">
+        <div class="projects-carousel lista-proyectos">
           <div class="project-card">
-            <div class="card rounded-5 border-1 bg-dark bg-opacity-50 shadow p-4 efecto-vidrio">
-              <div class="row g-1 align-items-center">
-                <div class="col-lg-6 col-xl-5 col-sm-12 col-xs-12 mb-4">
+            <div class="proyecto-plano py-2">
+              <div class="row proyecto-grilla">
+                <div class="col-lg-5 col-md-12 proyecto-media">
                   <a href="https://ciriu.vercel.app/" target="_blank">
                     <img src="/assets/mockup2.png" alt="Vista del ecommerce Ciriú" class="img-fluid rounded-5 user-select-none" style="box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);">
                   </a>
                 </div>
-                <div class="col-lg-6 col-xs-12 col-md-12">
+                <div class="col-lg-7 col-md-12 proyecto-info">
                   <div class="card-body">
                     <div class="col-md-12">
-                      <h5 class="fw-bold text-white fs-3"><span style="color: #a5db2e;">Ciriú</span> Ecommerce</h5>
+                      <h5 class="fw-bold text-white fs-3 titulo-display" appTextoHover><span style="color: #a5db2e;">Ciriú</span> Ecommerce</h5>
                     </div>
                     <hr style="width: auto; height: 3px; border: none; background: linear-gradient(90deg, transparent 0%, rgba(220, 220, 220, 0.18) 20%, rgba(220, 220, 220, 0.68) 50%, rgba(220, 220, 220, 0.18) 80%, transparent 100%); opacity: 1; border-radius: 999px; margin: 0.75rem 0;">
                     <div class="col-md-12">
@@ -80,18 +75,14 @@
                       </ul>
                     </div>
                   </div>
-                </div>
-                <div class="col-lg-12">
-                  <div class="col-sm-12">
-                    <p class="text-white fw-light" style="text-align: justify;">Desarrollado a medida para la empresa Ciriú ubicada en la localidad de Hernando, Córdoba, Argentina. Brindándole la solución en la gestión de sus ventas y manipulación de los artículos en su catálogo. El desarrollo se hizo en <span class="fw-semibold" style="color: #0dcaf0;">Java</span> con el framework Spring Boot para el BackEnd, implementando a <span class="fw-semibold" style="color: #0dcaf0;">Mercado Pago</span> como pasarela de pagos, por otro lado, se utilizó <span class="fw-semibold" style="color: #0dcaf0;">Angular</span> para el FrontEnd de la página, y como gestor de base datos se implementó <span class="fw-semibold" style="color: #0dcaf0;">PostgreSQL</span> para almacenar la información.</p>
-                  </div>
-                  <div class="col-md-12">
-                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                  <div class="proyecto-detalle">
+                    <p class="text-white fw-light">Desarrollado a medida para la empresa Ciriú ubicada en la localidad de Hernando, Córdoba, Argentina. Brindándole la solución en la gestión de sus ventas y manipulación de los artículos en su catálogo. El desarrollo se hizo en <span class="fw-semibold" style="color: #0dcaf0;">Java</span> con el framework Spring Boot para el BackEnd, implementando a <span class="fw-semibold" style="color: #0dcaf0;">Mercado Pago</span> como pasarela de pagos, por otro lado, se utilizó <span class="fw-semibold" style="color: #0dcaf0;">Angular</span> para el FrontEnd de la página, y como gestor de base datos se implementó <span class="fw-semibold" style="color: #0dcaf0;">PostgreSQL</span> para almacenar la información.</p>
+                    <div class="acciones-proyecto">
                       <a class="btn btn-outline-light rounded-5" href="https://github.com/danielgiacinto/backEnd-Ciriu" target="_blank" role="button"><i class="bi bi-github"></i> Código</a>
                       <a class="btn btn-outline-light rounded-5" href="https://ciriu.vercel.app/" target="_blank" role="button"><i class="bi bi-link-45deg"></i> Visitar sitio</a>
-                      <button type="button" class="btn btn-outline-light rounded-5" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                      <a class="btn btn-outline-light rounded-5" href="https://www.youtube.com/watch?v=CrgORz2ZPo8" target="_blank" rel="noopener noreferrer" role="button">
                         <i class="bi bi-camera-reels"></i> Ver video
-                      </button>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -99,17 +90,17 @@
             </div>
           </div>
           <div class="project-card">
-            <div class="card rounded-5 border-1 bg-dark bg-opacity-50 shadow p-4 efecto-vidrio">
-              <div class="row g-1 align-items-center">
-                <div class="col-lg-6 col-xl-5 col-sm-12 col-xs-12 mb-4">
+            <div class="proyecto-plano py-2">
+              <div class="row proyecto-grilla">
+                <div class="col-lg-5 col-md-12 proyecto-media">
                   <a href="https://github.com/danielgiacinto/script-agroads" target="_blank" class="project-icon-placeholder rounded-5 d-flex align-items-center justify-content-center">
                     <i class="bi bi-robot text-white" style="font-size: 5rem; opacity: 0.9;"></i>
                   </a>
                 </div>
-                <div class="col-lg-6 col-xs-12 col-md-12">
+                <div class="col-lg-7 col-md-12 proyecto-info">
                   <div class="card-body">
                     <div class="col-md-12">
-                      <h5 class="fw-bold text-white fs-3"><span style="color: #3776ab;">Script</span> Agroads</h5>
+                      <h5 class="fw-bold text-white fs-3 titulo-display" appTextoHover><span style="color: #3776ab;">Script</span> Agroads</h5>
                     </div>
                     <hr style="width: auto; height: 3px; border: none; background: linear-gradient(90deg, transparent 0%, rgba(220, 220, 220, 0.18) 20%, rgba(220, 220, 220, 0.68) 50%, rgba(220, 220, 220, 0.18) 80%, transparent 100%); opacity: 1; border-radius: 999px; margin: 0.75rem 0;">
                     <div class="col-md-12">
@@ -138,13 +129,9 @@
                       </ul>
                     </div>
                   </div>
-                </div>
-                <div class="col-lg-12">
-                  <div class="col-md-12">
-                    <p class="text-white fw-light" style="text-align: justify;">Software para carga automatizada de maquinaria agrícola en Agroads. Bot que publica productos a partir de un archivo <span class="fw-semibold" style="color: #0dcaf0;">Excel</span> y carpetas locales de fotos. Desarrollado en <span class="fw-semibold" style="color: #0dcaf0;">Python</span> con <span class="fw-semibold" style="color: #0dcaf0;">Playwright</span> para automatizar el navegador Chromium. Permite configurar credenciales, rutas y delays entre publicaciones. Incluye generación de ejecutable <span class="fw-semibold" style="color: #0dcaf0;">.exe</span> con PyInstaller para distribución sin instalar Python. El cliente solo necesita el Excel con datos, la carpeta de fotos y las credenciales de Agroads.</p>
-                  </div>
-                  <div class="col-md-12">
-                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                  <div class="proyecto-detalle">
+                    <p class="text-white fw-light">Software para carga automatizada de maquinaria agrícola en Agroads. Bot que publica productos a partir de un archivo <span class="fw-semibold" style="color: #0dcaf0;">Excel</span> y carpetas locales de fotos. Desarrollado en <span class="fw-semibold" style="color: #0dcaf0;">Python</span> con <span class="fw-semibold" style="color: #0dcaf0;">Playwright</span> para automatizar el navegador Chromium. Permite configurar credenciales, rutas y delays entre publicaciones. Incluye generación de ejecutable <span class="fw-semibold" style="color: #0dcaf0;">.exe</span> con PyInstaller para distribución sin instalar Python. El cliente solo necesita el Excel con datos, la carpeta de fotos y las credenciales de Agroads.</p>
+                    <div class="acciones-proyecto">
                       <a class="btn btn-outline-light rounded-5" href="https://github.com/danielgiacinto/script-agroads" target="_blank" role="button"><i class="bi bi-github"></i> Código</a>
                     </div>
                   </div>

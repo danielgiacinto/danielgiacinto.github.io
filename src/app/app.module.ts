@@ -8,6 +8,10 @@ import { ProjectsComponent } from './components/projects/projects.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { EducationComponent } from './components/education/education.component';
 import { ScrollAnimationDirective } from './directives/scroll-animation.directive';
+import { EnfoqueScrollDirective } from './directives/enfoque-scroll.directive';
+import { TextoHoverDirective } from './directives/texto-hover.directive';
+import { TextoParticulasComponent } from './components/texto-particulas/texto-particulas.component';
+import { CursorPersonalizadoComponent } from './components/cursor-personalizado/cursor-personalizado.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +20,11 @@ import { ScrollAnimationDirective } from './directives/scroll-animation.directiv
     ProjectsComponent,
     SkillsComponent,
     EducationComponent,
-    ScrollAnimationDirective
+    ScrollAnimationDirective,
+    EnfoqueScrollDirective,
+    TextoHoverDirective,
+    TextoParticulasComponent,
+    CursorPersonalizadoComponent
   ],
   imports: [
     BrowserModule,

@@ -1,3 +1,30 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "TikTok Sans", sans-serif !important;
+    font-optical-sizing: auto;
+    text-rendering: optimizeLegibility;
+}
+
+.titulo-display,
+.titulo-seccion {
+    font-stretch: 116%;
+    letter-spacing: -0.04em;
+}
+
+.titulo-seccion {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-stretch: 120%;
+    letter-spacing: -0.05em;
+}
+
+.letra-interactiva {
+    display: inline-block;
+    transition: opacity 0.22s ease;
+}
+
 ::-webkit-scrollbar {
     width: 16px;
 }
@@ -28,26 +55,57 @@
 
 [appScrollAnimation] {
     opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
 }
 
 @media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
     [appScrollAnimation] {
         opacity: 1;
+        filter: none;
         transform: none;
         transition: none;
     }
 
-    .nombre-animado,
+    .entrada-hero,
+    .entrada-diferida,
     .scroll-to-top {
         animation: none !important;
+        filter: none !important;
+    }
+
+    .bloque-edu,
+    .grupo-habilidad li,
+    .timeline-item,
+    .project-card {
+        opacity: 1 !important;
+        filter: none !important;
+        transform: none !important;
     }
 }
 
 [appScrollAnimation].scroll-animate {
     opacity: 1;
     transform: translateY(0);
+}
+
+.grupo-habilidad li {
+    opacity: calc(0.9 + var(--enfoque, 1) * 0.1);
+    transform: scale(calc(0.96 + var(--enfoque, 1) * 0.06));
+    filter: none;
+    transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+#skills {
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .modo-claro .text-white,
@@ -118,28 +176,3 @@
     color: inherit !important;
 }
 
-/* Estilos globales para modales de Bootstrap */
-.navbar.fixed-top {
-    z-index: 1030;
-}
-
-.modal {
-    z-index: 1055;
-}
-
-.modal-backdrop {
-    z-index: 1050;
-}
-
-.modal.show {
-    display: block !important;
-}
-
-.modal-backdrop.show {
-    opacity: 0.5;
-}
-
-body.modal-open {
-    overflow: hidden;
-    padding-right: 0 !important;
-}

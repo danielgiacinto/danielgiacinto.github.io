@@ -1,8 +1,31 @@
+<div class="fondo-pagina" [class.modo-claro]="!isDarkMode" aria-hidden="true">
+<app-cursor-personalizado></app-cursor-personalizado>
+<svg class="cuadricula" xmlns="http://www.w3.org/2000/svg">
+  <line x1="7%" y1="0" x2="7%" y2="100%"></line>
+  <line x1="50%" y1="0" x2="50%" y2="100%"></line>
+  <line x1="93%" y1="0" x2="93%" y2="100%"></line>
+  <line x1="0" y1="34%" x2="100%" y2="34%"></line>
+  <line x1="0" y1="68%" x2="100%" y2="68%"></line>
+  <g class="cruces">
+    <line x1="7%" y1="calc(34% - 7px)" x2="7%" y2="calc(34% + 7px)"></line>
+    <line x1="calc(7% - 7px)" y1="34%" x2="calc(7% + 7px)" y2="34%"></line>
+    <line x1="50%" y1="calc(34% - 7px)" x2="50%" y2="calc(34% + 7px)"></line>
+    <line x1="calc(50% - 7px)" y1="34%" x2="calc(50% + 7px)" y2="34%"></line>
+    <line x1="93%" y1="calc(34% - 7px)" x2="93%" y2="calc(34% + 7px)"></line>
+    <line x1="calc(93% - 7px)" y1="34%" x2="calc(93% + 7px)" y2="34%"></line>
+    <line x1="7%" y1="calc(68% - 7px)" x2="7%" y2="calc(68% + 7px)"></line>
+    <line x1="calc(7% - 7px)" y1="68%" x2="calc(7% + 7px)" y2="68%"></line>
+    <line x1="50%" y1="calc(68% - 7px)" x2="50%" y2="calc(68% + 7px)"></line>
+    <line x1="calc(50% - 7px)" y1="68%" x2="calc(50% + 7px)" y2="68%"></line>
+    <line x1="93%" y1="calc(68% - 7px)" x2="93%" y2="calc(68% + 7px)"></line>
+    <line x1="calc(93% - 7px)" y1="68%" x2="calc(93% + 7px)" y2="68%"></line>
+  </g>
+</svg>
+</div>
 <div
-  class="container-fluid pb-5"
+  class="container-fluid pb-5 lienzo"
   [ngClass]="isDarkMode ? 'bg-dark' : 'bg-light'"
   [class.modo-claro]="!isDarkMode"
-  style="font-family: 'Onest'"
 >
   <div
     class="row container d-flex mx-auto justify-content-center align-items-center"
@@ -10,7 +33,7 @@
     <div class="col-md-12 mb-5 mt-5 pb-5">
       <nav class="navbar navbar-expand-lg mt-2 fixed-top">
         <ul
-          class="card efecto-vidrio d-flex flex-row rounded-5 border-0 p-2 ps-4 pe-4 justify-content-center align-items-center gap-4 list-unstyled m-auto"
+          class="barra-nav d-flex flex-row rounded-5 border-0 p-2 ps-4 pe-4 justify-content-center align-items-center gap-4 list-unstyled m-auto"
         >
           <li class="nav-item">
             <a class="nav-link fw-semibold color-header" href="#experience" [class.activo]="seccionActiva === 'experience'"
@@ -87,26 +110,24 @@
       </nav>
     </div>
     <div class="col-lg-8 col-sm-12 col-xs-12 mb-4 mt-5 pb-5">
-      <div class="card rounded-5 border-0 efecto-vidrio pb-3">
+      <div class="pb-3 entrada-hero">
         <div class="card-body">
           <div class="row d-flex justify-content-center align-items-center">
-            <div class="col-md-12 mt-3 text-start">
-              <h3 class="fw-bold display-5 text-center nombre-animado">
-                Daniel José Giacinto
-              </h3>
-              <p class="rol-principal text-center mb-0">Full Stack Developer</p>
+            <div class="col-md-12 mt-4 mb-1 text-center">
+              <h1 class="nombre-principal">
+                <app-texto-particulas texto="Daniel José Giacinto" [oscuro]="isDarkMode"></app-texto-particulas>
+              </h1>
+              <p class="rol-principal text-center mb-0" appTextoHover>Full Stack Developer</p>
             </div>
             <div class="row mt-3 align-items-center justify-content-center">
               <div
                 class="col-md-5 col-sm-12 d-flex justify-content-md-end justify-content-center"
               >
-                <div class="card rounded-5 border-0 p-2" [ngClass]="isDarkMode ? 'bg-dark bg-opacity-50' : 'bg-light bg-opacity-50'">
-                  <img
-                    src="assets/avatar.png"
-                    alt="Foto de Daniel José Giacinto"
-                    class="card-img-top img-fluid rounded-circle foto-perfil"
-                  />
-                </div>
+                <img
+                  src="assets/avatar.png"
+                  alt="Foto de Daniel José Giacinto"
+                  class="img-fluid rounded-circle foto-perfil entrada-diferida"
+                />
               </div>
               <div class="col-md-7 align-items-center justify-content-center">
                 <div class="col-md-10 mt-3 text-center">
@@ -198,38 +219,23 @@
           </div>
           <div class="row d-flex justify-content-center align-items-center">
             <div class="col-md-10 p-2 mt-3">
-              <div
-                class="card rounded-5 border-0 text-md-start text-center"
-                [ngClass]="isDarkMode ? 'bg-dark bg-opacity-25' : 'bg-light bg-opacity-75'"
-                [style.background-color]="isDarkMode ? '#434343' : '#f8f9fa'"
-              >
-                <div class="row gap-4 p-3">
-                  <div class="text-center col-12 col-md">
-                    <i
-                      class="bi bi-mortarboard-fill"
-                      style="font-size: 2rem; color: #0dcaf0"
-                    ></i>
-                    <div class="fw-semibold mt-2" [ngClass]="isDarkMode ? 'text-white' : 'text-dark'">
-                      Técnico en Programación
-                    </div>
+              <div class="grilla-datos entrada-diferida">
+                <div class="celda-dato">
+                  <i class="bi bi-mortarboard-fill"></i>
+                  <div class="fw-semibold mt-2" [ngClass]="isDarkMode ? 'text-white' : 'text-dark'">
+                    Técnico en Programación
                   </div>
-                  <div class="text-center col-12 col-md">
-                    <i
-                      class="bi bi-clock-history"
-                      style="font-size: 2rem; color: #0dcaf0"
-                    ></i>
-                    <div class="fw-semibold mt-2" [ngClass]="isDarkMode ? 'text-white' : 'text-dark'">
-                      +3 años de experiencia
-                    </div>
+                </div>
+                <div class="celda-dato">
+                  <i class="bi bi-clock-history"></i>
+                  <div class="fw-semibold mt-2" [ngClass]="isDarkMode ? 'text-white' : 'text-dark'">
+                    +3 años de experiencia
                   </div>
-                  <div class="text-center col-12 col-md">
-                    <i
-                      class="bi bi-lightning-charge-fill"
-                      style="font-size: 2rem; color: #0dcaf0"
-                    ></i>
-                    <div class="fw-semibold mt-2" [ngClass]="isDarkMode ? 'text-white' : 'text-dark'">
-                      Full Stack Developer
-                    </div>
+                </div>
+                <div class="celda-dato">
+                  <i class="bi bi-lightning-charge-fill"></i>
+                  <div class="fw-semibold mt-2" [ngClass]="isDarkMode ? 'text-white' : 'text-dark'">
+                    Full Stack Developer
                   </div>
                 </div>
               </div>
@@ -254,10 +260,10 @@
     </div>
   </div>
 
-  <footer class="pie text-center">
-    <p class="fw-semibold mb-2" [ngClass]="isDarkMode ? 'text-white' : 'text-dark'">¿Armamos algo juntos?</p>
-    <a class="enlace-pie" href="mailto:danielgiacinto@gmail.com">danielgiacinto@gmail.com</a>
-    <p class="mb-0 mt-3 small" [ngClass]="isDarkMode ? 'text-white' : 'text-secondary'">© 2026 Daniel José Giacinto · Córdoba, Argentina</p>
+  <footer class="cierre text-center">
+    <p class="cierre-titulo titulo-display" appTextoHover [ngClass]="isDarkMode ? 'text-white' : 'text-dark'">¿Creamos algo juntos?</p>
+    <a class="cierre-correo" href="mailto:danielgiacinto@gmail.com">danielgiacinto@gmail.com</a>
+    <p class="cierre-nota mb-0 mt-4" [ngClass]="isDarkMode ? 'text-white' : 'text-secondary'">© 2026 Daniel José Giacinto · Córdoba, Argentina</p>
   </footer>
 
   <!-- Botón Scroll to Top -->
@@ -270,25 +276,4 @@
     title="Volver arriba">
     <i class="bi bi-arrow-up-circle-fill"></i>
   </button>
-</div>
-
-<!-- Video de Ciriu Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-xl modal-dialog-centered">
-    <div class="modal-content rounded-5 border-0 bg-dark">
-      <div class="modal-header border-0 pb-2">
-        <h1 class="modal-title fs-5 text-white" id="exampleModalLabel">Proyecto Práctica Supervisada - Ecommerce Ciriú</h1>
-        <button type="button" class="btn-close btn-close-white pe-4" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body border-0 p-0">
-        <div class="ratio ratio-16x9">
-          <iframe src="https://www.youtube.com/embed/CrgORz2ZPo8" 
-            title="Proyecto Ecommerce Ciriú" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen>
-          </iframe>
-        </div>
-      </div>
-    </div>
-  </div>
 </div>

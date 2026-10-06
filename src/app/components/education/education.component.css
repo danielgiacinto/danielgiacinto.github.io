@@ -1,3 +1,26 @@
+.bloque-edu {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.15rem;
+  max-width: 720px;
+  margin: 0 auto 2.25rem;
+  text-align: left;
+}
+
+.edu-texto {
+  flex: 1;
+  min-width: 0;
+}
+
+.edu-icon {
+  flex: 0 0 2.6rem;
+  width: 2.6rem;
+  margin: 0;
+  padding-top: 0.1rem;
+  text-align: center;
+  line-height: 1;
+}
+
 .logo-utn {
   height: 50px;
   width: auto;

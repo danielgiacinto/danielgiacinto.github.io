@@ -1,25 +1,213 @@
-/* Animación de gradiente para el nombre principal */
-.nombre-animado {
-    background: linear-gradient(90deg, #0dcaf0,#fff, #0dcaf0);
-    background-size: 400% 400%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    color: transparent;
-    animation: gradientText 5s ease-in-out infinite;
+.fondo-pagina {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background: #111113;
+    overflow: hidden;
 }
 
-@keyframes gradientText {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+.fondo-pagina.modo-claro {
+    background: #f6f5f2;
 }
 
+.cuadricula {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.cuadricula line {
+    stroke: rgba(255, 255, 255, 0.028);
+    stroke-width: 1;
+}
+
+.cuadricula .cruces line {
+    stroke: rgba(255, 255, 255, 0.05);
+}
+
+.fondo-pagina.modo-claro .cuadricula line {
+    stroke: rgba(20, 20, 20, 0.03);
+}
+
+.fondo-pagina.modo-claro .cuadricula .cruces line {
+    stroke: rgba(20, 20, 20, 0.05);
+}
+
+.lienzo,
+.lienzo.bg-dark,
+.lienzo.bg-light,
+.lienzo.modo-claro {
+    position: relative;
+    z-index: 1;
+    background: transparent !important;
+    background-image: none !important;
+    min-height: 100vh;
+}
 
 .modo-claro {
-    background-color: #ffffff !important;
     min-height: 100vh;
     height: 100%;
+}
+
+.nombre-principal {
+    margin: 0;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: 1;
+}
+
+.entrada-hero {
+    animation: enfocar 1.05s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.grilla-datos {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 1.75rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.22);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+.celda-dato {
+    position: relative;
+    padding: 2.4rem 1rem;
+    text-align: center;
+    border-left: 1px solid rgba(255, 255, 255, 0.22);
+    transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), background-color 0.4s ease;
+}
+
+.celda-dato:last-child {
+    border-right: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+.celda-dato i {
+    font-size: 2rem;
+    color: #0dcaf0;
+}
+
+.celda-dato::before,
+.celda-dato::after,
+.grilla-datos::before,
+.grilla-datos::after {
+    content: "+";
+    position: absolute;
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 16px;
+    line-height: 1;
+    font-weight: 300;
+    pointer-events: none;
+}
+
+.celda-dato::before { top: -9px; left: -7px; }
+.celda-dato::after { bottom: -9px; left: -7px; }
+.grilla-datos::before { top: -9px; right: -7px; }
+.grilla-datos::after { bottom: -9px; right: -7px; }
+
+.celda-dato:hover {
+    transform: scale(1.06);
+    z-index: 2;
+    background: rgba(13, 202, 240, 0.07);
+}
+
+.modo-claro .grilla-datos,
+.modo-claro .celda-dato,
+.modo-claro .celda-dato:last-child {
+    border-color: rgba(0, 0, 0, 0.16);
+}
+
+.modo-claro .celda-dato::before,
+.modo-claro .celda-dato::after,
+.modo-claro .grilla-datos::before,
+.modo-claro .grilla-datos::after {
+    color: rgba(0, 0, 0, 0.45);
+}
+
+.modo-claro .celda-dato:hover {
+    background: rgba(109, 78, 214, 0.06);
+}
+
+@media (max-width: 767px) {
+    .grilla-datos {
+        grid-template-columns: 1fr;
+    }
+
+    .celda-dato,
+    .celda-dato:last-child {
+        border-right: 1px solid rgba(255, 255, 255, 0.22);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+    }
+
+    .celda-dato:last-child {
+        border-bottom: 0;
+    }
+}
+
+.cierre {
+    padding: 4.5rem 1.25rem 2.5rem;
+}
+
+.cierre-titulo {
+    font-size: clamp(1.85rem, 4vw, 2.75rem);
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+    font-stretch: 112%;
+    max-width: 16em;
+    margin: 0 auto 1rem;
+}
+
+@media (max-width: 576px) {
+    .cierre-titulo {
+        font-size: 1.7rem;
+        max-width: 100%;
+    }
+}
+
+.cierre-correo {
+    display: inline-block;
+    font-size: clamp(1rem, 1.6vw, 1.2rem);
+    color: #0dcaf0;
+    font-weight: 560;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(13, 202, 240, 0.45);
+    transition: letter-spacing 0.45s ease, color 0.3s ease;
+}
+
+.cierre-correo:hover {
+    letter-spacing: 0.06em;
+    color: #7b5cff;
+}
+
+.entrada-diferida {
+    animation: enfocar 1s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both;
+}
+
+.barra-nav {
+    background: rgba(17, 17, 19, 0.55);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.modo-claro .barra-nav {
+    background: rgba(255, 255, 255, 0.78);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+@keyframes enfocar {
+    from {
+        opacity: 0;
+        filter: blur(16px);
+        transform: translateY(22px);
+    }
+    to {
+        opacity: 1;
+        filter: blur(0);
+        transform: none;
+    }
 }
 
 .modo-claro .efecto-vidrio {
@@ -44,22 +232,29 @@
 }
 
 .rol-principal {
-    color: #0dcaf0;
-    font-weight: 600;
-    letter-spacing: 0.04em;
-    margin-top: 0.35rem;
+    color: rgba(244, 241, 234, 0.72);
+    font-weight: 520;
+    font-stretch: 112%;
+    letter-spacing: -0.03em;
+    font-size: clamp(1.15rem, 2.2vw, 1.65rem);
+    margin-top: 0.85rem;
 }
 
-.modo-claro .nombre-animado {
-    background-image: linear-gradient(90deg, #087990, #212529, #087990);
+.modo-claro .rol-principal {
+    color: rgba(20, 20, 20, 0.72);
 }
 
 .foto-perfil {
     width: 200px;
     height: 200px;
     object-fit: cover;
-    border: 3px solid rgba(13, 202, 240, 0.9);
-    box-shadow: 0 10px 28px rgba(13, 202, 240, 0.28);
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.28);
+}
+
+.modo-claro .foto-perfil {
+    border-color: rgba(0, 0, 0, 0.12);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.08);
 }
 
 .enlace-dato {

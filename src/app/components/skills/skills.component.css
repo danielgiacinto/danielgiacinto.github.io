@@ -111,6 +111,35 @@
     box-shadow: 0 0 30px 10px rgba(255, 20, 147, 0.3), 0 0 60px 20px rgba(255, 20, 147, 0.15) !important;
 }
 
+.logo-github {
+    color: #f4f1ea;
+}
+
+:host-context(.modo-claro) .logo-github {
+    color: #161616;
+}
+
+.logo-cursor-fuerte {
+    fill: #f4f1ea;
+}
+
+.logo-cursor-suave {
+    fill: rgba(244, 241, 234, 0.42);
+}
+
+:host-context(.modo-claro) .logo-cursor-fuerte {
+    fill: #161616;
+}
+
+:host-context(.modo-claro) .logo-cursor-suave {
+    fill: rgba(22, 22, 22, 0.38);
+}
+
+.grupo-habilidad {
+    width: 100%;
+    padding: 2.5rem 0 3.5rem;
+}
+
 .animacion{
     scale: 1.0;
     transition: transform 0.3s ease-in-out;

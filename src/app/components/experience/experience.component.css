@@ -19,13 +19,23 @@
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 
+.experience-list {
+    text-align: start;
+    padding-left: 1.15rem;
+}
+
+.experience-list li {
+    margin-bottom: 0.45rem;
+    line-height: 1.55;
+}
+
 .timeline {
     position: relative;
     margin-top: 5px;
     padding-left: 8px;
     border-left: none;
 }
-  
+
 .timeline-item {
     position: relative;
     margin-bottom: 30px;

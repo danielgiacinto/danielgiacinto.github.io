@@ -10,12 +10,14 @@ export class AppComponent implements OnInit {
   isDarkMode = true;
   showScrollTop = false;
   seccionActiva = '';
+  private movimientoReducido = false;
 
   ngOnInit() {
     const temaGuardado = localStorage.getItem('tema');
     if (temaGuardado === 'claro') {
       this.isDarkMode = false;
     }
+    this.movimientoReducido = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     this.onWindowScroll();
   }
 
@@ -24,6 +26,7 @@ export class AppComponent implements OnInit {
     const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
     this.showScrollTop = scrollPosition > 150;
     this.actualizarSeccionActiva(scrollPosition);
+    this.desplazarHero(scrollPosition);
   }
 
   toggleTheme() {
@@ -57,5 +60,20 @@ export class AppComponent implements OnInit {
     });
 
     this.seccionActiva = activa;
+  }
+
+  private desplazarHero(scrollPosition: number) {
+    const hero = document.querySelector('.entrada-hero') as HTMLElement | null;
+    if (!hero || this.movimientoReducido) {
+      return;
+    }
+    if (scrollPosition < 8) {
+      hero.style.transform = '';
+      hero.style.opacity = '';
+      return;
+    }
+    const progreso = Math.min(scrollPosition / 520, 1);
+    hero.style.transform = `translateY(${progreso * 28}px)`;
+    hero.style.opacity = String(1 - progreso * 0.28);
   }
 }
