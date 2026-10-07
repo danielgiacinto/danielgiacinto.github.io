@@ -245,3 +245,141 @@
         font-size: 0.75rem;
     }
 }
+
+.carrusel-habilidades {
+    position: relative;
+    left: 50%;
+    width: 100vw;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    overflow: hidden;
+    padding: 1.25rem 0 2.5rem;
+}
+
+.carrusel-degradado {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 7.5rem;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.carrusel-degradado-izq {
+    left: 0;
+    background: linear-gradient(to right, #111113 8%, rgba(17, 17, 19, 0));
+}
+
+.carrusel-degradado-der {
+    right: 0;
+    background: linear-gradient(to left, #111113 8%, rgba(17, 17, 19, 0));
+}
+
+:host-context(.modo-claro) .carrusel-degradado-izq {
+    background: linear-gradient(to right, #f6f5f2 8%, rgba(246, 245, 242, 0));
+}
+
+:host-context(.modo-claro) .carrusel-degradado-der {
+    background: linear-gradient(to left, #f6f5f2 8%, rgba(246, 245, 242, 0));
+}
+
+.carrusel-pista {
+    display: flex;
+    width: max-content;
+    animation: carrusel-derecha 48s linear infinite;
+}
+
+.carrusel-habilidades:hover .carrusel-pista {
+    animation-play-state: paused;
+}
+
+.carrusel-grupo {
+    display: flex;
+    align-items: flex-start;
+    gap: 3.25rem;
+    margin: 0;
+    padding: 1.35rem 1.6rem 0.5rem;
+    list-style: none;
+}
+
+.carrusel-grupo > li {
+    --enfoque: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 4.75rem;
+    text-align: center;
+    filter: blur(calc((1 - var(--enfoque)) * 8px));
+    opacity: calc(0.42 + var(--enfoque) * 0.58);
+    transform: scale(calc(0.9 + var(--enfoque) * 0.1));
+    user-select: none;
+}
+
+.carrusel-grupo > li svg {
+    width: 52px;
+    height: 52px;
+    filter: grayscale(1);
+    transition: filter 0.35s ease, transform 0.35s ease;
+}
+
+.carrusel-grupo > li:hover svg {
+    filter: grayscale(0);
+    transform: scale(1.08);
+}
+
+.carrusel-grupo > li p {
+    margin: 0.7rem 0 0;
+    font-size: 0.85rem;
+    line-height: 1.2;
+    white-space: nowrap;
+}
+
+.logo-chatgpt {
+    fill: #f4f1ea;
+}
+
+:host-context(.modo-claro) .logo-chatgpt {
+    fill: #141414;
+}
+
+@keyframes carrusel-derecha {
+    from {
+        transform: translateX(-50%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .carrusel-habilidades {
+        left: auto;
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .carrusel-pista {
+        animation: none;
+        width: 100%;
+        max-width: 100%;
+        justify-content: center;
+    }
+
+    .carrusel-grupo {
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        row-gap: 2rem;
+    }
+
+    .carrusel-grupo > li {
+        filter: none;
+        opacity: 1;
+        transform: none;
+    }
+
+    .carrusel-degradado {
+        display: none;
+    }
+}

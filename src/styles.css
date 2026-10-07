@@ -6,6 +6,7 @@ body {
     font-family: "TikTok Sans", sans-serif !important;
     font-optical-sizing: auto;
     text-rendering: optimizeLegibility;
+    overflow-x: clip;
 }
 
 .titulo-display,
@@ -174,5 +175,111 @@ body {
 
 .modo-claro .btn-outline-light i {
     color: inherit !important;
+}
+
+.boton-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.55rem;
+    height: 3.5rem;
+    padding: 0 2.15rem;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 0.01em;
+    text-decoration: none;
+    line-height: 1;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+.boton-pill svg {
+    width: 1.15rem;
+    height: 1.15rem;
+    flex: 0 0 auto;
+}
+
+.boton-pill i {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1;
+}
+
+.boton-pill:focus-visible {
+    outline: 2px solid #0dcaf0;
+    outline-offset: 3px;
+}
+
+.boton-pill-lleno {
+    background: #f4f1ea;
+    color: #111113;
+    border: 1px solid transparent;
+}
+
+.boton-pill-lleno:hover,
+.boton-pill-lleno:focus-visible {
+    background: #e7e5e4;
+    color: #111113;
+}
+
+.boton-pill-contorno {
+    background: transparent;
+    color: rgba(244, 241, 234, 0.92);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+.boton-pill-contorno:hover,
+.boton-pill-contorno:focus-visible {
+    background: #f4f1ea;
+    color: #111113;
+    border-color: #f4f1ea;
+}
+
+.boton-pill-hero {
+    height: 3rem;
+    padding: 0 1.85rem;
+}
+
+.boton-pill-compacto {
+    height: 3rem;
+    padding: 0 1.2rem;
+    font-size: 0.85rem;
+}
+
+.modo-claro .boton-pill-lleno {
+    background: #161616;
+    color: #f6f5f2;
+}
+
+.modo-claro .boton-pill-lleno:hover,
+.modo-claro .boton-pill-lleno:focus-visible {
+    background: #2a2a2a;
+    color: #f6f5f2;
+}
+
+.modo-claro .boton-pill-contorno {
+    color: #161616;
+    border-color: rgba(0, 0, 0, 0.22);
+    background: transparent;
+}
+
+.modo-claro .boton-pill-contorno:hover,
+.modo-claro .boton-pill-contorno:focus-visible {
+    background: #161616;
+    color: #f6f5f2;
+    border-color: #161616;
+}
+
+@media (max-width: 576px) {
+    .contacto-acciones {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .contacto-acciones .boton-pill {
+        width: 100%;
+    }
 }
 

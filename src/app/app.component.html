@@ -109,135 +109,32 @@
         </ul>
       </nav>
     </div>
-    <div class="col-lg-8 col-sm-12 col-xs-12 mb-4 mt-5 pb-5">
+    <div class="col-lg-8 col-12 mb-4 mt-5 pb-5">
       <div class="pb-3 entrada-hero">
-        <div class="card-body">
-          <div class="row d-flex justify-content-center align-items-center">
-            <div class="col-md-12 mt-4 mb-1 text-center">
-              <h1 class="nombre-principal">
-                <app-texto-particulas texto="Daniel José Giacinto" [oscuro]="isDarkMode"></app-texto-particulas>
-              </h1>
-              <p class="rol-principal text-center mb-0" appTextoHover>Full Stack Developer</p>
-            </div>
-            <div class="row mt-3 align-items-center justify-content-center">
-              <div
-                class="col-md-5 col-sm-12 d-flex justify-content-md-end justify-content-center"
-              >
-                <img
-                  src="assets/avatar.png"
-                  alt="Foto de Daniel José Giacinto"
-                  class="img-fluid rounded-circle foto-perfil entrada-diferida"
-                />
-              </div>
-              <div class="col-md-7 align-items-center justify-content-center">
-                <div class="col-md-10 mt-3 text-center">
-                  <ul
-                    class="d-flex align-items-center justify-content-center me-auto list-unstyled gap-3"
-                  >
-                    <li class="nav-item">
-                      <a
-                        class="btn btn-dark rounded-5 fs-6 border-1 boton-redes"
-                        href="https://www.linkedin.com/in/danielgiacinto/"
-                        title="LinkedIn"
-                        aria-label="LinkedIn"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        role="button"
-                        ><i class="bi bi-linkedin"></i>
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a
-                        class="btn btn-dark rounded-5 fs-6 border-1 boton-redes"
-                        href="https://github.com/danielgiacinto"
-                        title="GitHub"
-                        aria-label="GitHub"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        role="button"
-                        ><i class="bi bi-github"></i>
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a
-                        class="btn btn-dark rounded-5 fs-6 border-1 boton-redes"
-                        href="mailto:danielgiacinto@gmail.com"
-                        title="Correo"
-                        aria-label="Enviar correo"
-                        role="button"
-                        ><i class="bi bi-envelope-fill"></i>
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a
-                        class="btn btn-dark rounded-5 fs-6 border-1 boton-redes"
-                        href="assets/cv.pdf"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        title="Curriculum"
-                        aria-label="Abrir curriculum"
-                        ><i class="bi bi-file-earmark-person-fill"></i>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div
-                  class="col-md-10 d-flex flex-column justify-content-center text-center align-items-center mt-3"
-                >
-                  <ul class="list-unstyled m-0 p-0 d-flex flex-column gap-0">
-                    <li
-                      class="mb-3 badge rounded-pill px-4 py-2 d-flex align-items-center justify-content-center"
-                      [ngClass]="isDarkMode ? 'bg-dark bg-opacity-25' : 'bg-light bg-opacity-75'"
-                    >
-                      <span class="enlace-dato" [ngClass]="isDarkMode ? 'text-white' : 'text-dark'">
-                        <i class="bi bi-geo-alt-fill fs-5 me-2"></i>
-                        <span>Córdoba, Argentina</span>
-                      </span>
-                    </li>
-                    <li
-                      class="mb-3 badge rounded-pill px-4 py-2 d-flex align-items-center justify-content-center"
-                      [ngClass]="isDarkMode ? 'bg-dark bg-opacity-25' : 'bg-light bg-opacity-75'"
-                    >
-                      <a class="enlace-dato" [ngClass]="isDarkMode ? 'text-white' : 'text-dark'" href="tel:+543534067588">
-                        <i class="bi bi-telephone-fill fs-5 me-2"></i>
-                        <span>+54 353 4067588</span>
-                      </a>
-                    </li>
-                    <li
-                      class="mb-3 badge rounded-pill px-4 py-2 d-flex align-items-center justify-content-center"
-                      [ngClass]="isDarkMode ? 'bg-dark bg-opacity-25' : 'bg-light bg-opacity-75'"
-                    >
-                      <a class="enlace-dato" [ngClass]="isDarkMode ? 'text-white' : 'text-dark'" href="mailto:danielgiacinto@gmail.com">
-                        <i class="bi bi-envelope-fill fs-5 me-2"></i>
-                        <span>danielgiacinto@gmail.com</span>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+        <div class="hero-grilla">
+          <div class="hero-texto text-center text-lg-start">
+            <h1 class="nombre-principal">
+              <app-texto-particulas texto="Daniel José Giacinto" [oscuro]="isDarkMode"></app-texto-particulas>
+            </h1>
+            <p class="rol-principal text-center text-lg-start mb-0" appTextoHover>Full Stack Developer</p>
+            <div class="acciones-hero">
+              <a class="boton-pill boton-pill-contorno boton-pill-hero" href="#contacto">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path>
+                  <path d="M14 2v4a2 2 0 0 0 2 2h4"></path>
+                  <path d="M10 9H8"></path>
+                  <path d="M16 13H8"></path>
+                  <path d="M16 17H8"></path>
+                </svg>
+                Contáctame
+              </a>
             </div>
           </div>
-          <div class="row d-flex justify-content-center align-items-center">
-            <div class="col-md-10 p-2 mt-3">
-              <div class="grilla-datos entrada-diferida">
-                <div class="celda-dato">
-                  <i class="bi bi-mortarboard-fill"></i>
-                  <div class="fw-semibold mt-2" [ngClass]="isDarkMode ? 'text-white' : 'text-dark'">
-                    Técnico en Programación
-                  </div>
-                </div>
-                <div class="celda-dato">
-                  <i class="bi bi-clock-history"></i>
-                  <div class="fw-semibold mt-2" [ngClass]="isDarkMode ? 'text-white' : 'text-dark'">
-                    +3 años de experiencia
-                  </div>
-                </div>
-                <div class="celda-dato">
-                  <i class="bi bi-lightning-charge-fill"></i>
-                  <div class="fw-semibold mt-2" [ngClass]="isDarkMode ? 'text-white' : 'text-dark'">
-                    Full Stack Developer
-                  </div>
-                </div>
+          <div class="hero-foto">
+            <div class="marco-foto">
+              <span class="marco-foto-fondo" aria-hidden="true"></span>
+              <div class="marco-foto-recorte">
+                <img src="assets/foto-perfil.png" alt="Daniel José Giacinto" />
               </div>
             </div>
           </div>
@@ -260,9 +157,31 @@
     </div>
   </div>
 
-  <footer class="cierre text-center">
+  <footer id="contacto" class="cierre text-center">
     <p class="cierre-titulo titulo-display" appTextoHover [ngClass]="isDarkMode ? 'text-white' : 'text-dark'">¿Creamos algo juntos?</p>
-    <a class="cierre-correo" href="mailto:danielgiacinto@gmail.com">danielgiacinto@gmail.com</a>
+    <div class="contacto-acciones">
+      <a class="boton-pill boton-pill-lleno" href="tel:+543534067588">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+        </svg>
+        +54 353 4067588
+      </a>
+      <a class="boton-pill boton-pill-contorno" href="https://www.linkedin.com/in/danielgiacinto/" target="_blank" rel="noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+          <rect width="4" height="12" x="2" y="9"></rect>
+          <circle cx="4" cy="4" r="2"></circle>
+        </svg>
+        LinkedIn
+      </a>
+      <a class="boton-pill boton-pill-contorno" href="mailto:danielgiacinto@gmail.com">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+          <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+        </svg>
+        Correo
+      </a>
+    </div>
     <p class="cierre-nota mb-0 mt-4" [ngClass]="isDarkMode ? 'text-white' : 'text-secondary'">© 2026 Daniel José Giacinto · Córdoba, Argentina</p>
   </footer>
 

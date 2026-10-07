@@ -300,3 +300,20 @@
     border: 1px solid rgba(0, 0, 0, 0.1) !important;
     box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.1), 0 2px 8px 0 rgba(0, 0, 0, 0.06) !important;
 }
+
+@media (min-width: 992px) {
+  .proyecto-invertido {
+    flex-direction: row-reverse;
+  }
+
+  .proyecto-invertido .proyecto-media {
+    padding-right: 0;
+    padding-left: 0.35rem;
+  }
+
+  .proyecto-invertido .proyecto-info .card-body,
+  .proyecto-invertido .proyecto-detalle {
+    padding-left: 0;
+    padding-right: 0.85rem;
+  }
+}

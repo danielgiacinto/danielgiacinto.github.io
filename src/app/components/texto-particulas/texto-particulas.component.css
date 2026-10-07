@@ -18,6 +18,12 @@
   transition: opacity 0.45s ease, filter 0.55s ease;
 }
 
+@media (min-width: 992px) and (max-width: 1599.98px) {
+  .medida {
+    font-size: min(3.35rem, 3.15vw);
+  }
+}
+
 .medida.desaparece {
   opacity: 0;
   filter: blur(12px);

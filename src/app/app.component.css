@@ -147,7 +147,142 @@
 }
 
 .cierre {
-    padding: 4.5rem 1.25rem 2.5rem;
+    padding: 6.5rem 1.25rem 3rem;
+}
+
+#contacto {
+    scroll-margin-top: 4rem;
+}
+
+.contacto-acciones {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.7rem;
+    margin-top: 2.6rem;
+}
+
+.contacto-acciones .boton-pill {
+    height: 2.45rem;
+    padding: 0 1.05rem;
+    font-size: 0.8rem;
+    gap: 0.4rem;
+}
+
+.contacto-acciones .boton-pill svg {
+    width: 0.95rem;
+    height: 0.95rem;
+}
+
+.acciones-hero {
+    margin-top: 1.9rem;
+}
+
+.hero-grilla {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.35rem;
+}
+
+@media (max-width: 991.98px) {
+    .hero-grilla {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-texto {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .hero-foto {
+        align-self: center;
+    }
+}
+
+.hero-texto {
+    flex: 1 1 auto;
+    min-width: 0;
+    container-type: inline-size;
+}
+
+.hero-foto {
+    flex: 0 0 auto;
+}
+
+.hero-texto ::ng-deep .medida {
+    font-size: clamp(1.55rem, 6.4cqi, 3.35rem);
+}
+
+.marco-foto {
+    position: relative;
+    width: min(100%, 16.5rem);
+    aspect-ratio: 1;
+    margin: 0.75rem auto 0;
+}
+
+.marco-foto-fondo {
+    position: absolute;
+    inset: 1.05rem -0.95rem -0.95rem 1.1rem;
+    border-radius: 2.4rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.marco-foto-recorte {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 2.4rem;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: #1a1a1c;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.45);
+}
+
+.marco-foto-recorte img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 22%;
+    filter: grayscale(1);
+    transform: scale(1.06);
+    transition: filter 0.7s ease, transform 0.7s ease;
+}
+
+.marco-foto:hover .marco-foto-recorte img {
+    filter: grayscale(0);
+    transform: scale(1);
+}
+
+.modo-claro .marco-foto-fondo {
+    background: rgba(0, 0, 0, 0.03);
+    border-color: rgba(0, 0, 0, 0.08);
+}
+
+.modo-claro .marco-foto-recorte {
+    border-color: rgba(0, 0, 0, 0.1);
+    background: #eceae6;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.18);
+}
+
+@media (min-width: 992px) {
+    .hero-grilla {
+        justify-content: flex-start;
+        gap: 1.6rem;
+    }
+
+    .marco-foto {
+        width: 12.75rem;
+        margin: 0;
+    }
+}
+
+@media (min-width: 1200px) {
+    .marco-foto {
+        width: 14.25rem;
+    }
 }
 
 .cierre-titulo {
@@ -234,10 +369,14 @@
 .rol-principal {
     color: rgba(244, 241, 234, 0.72);
     font-weight: 520;
-    font-stretch: 112%;
+    font-stretch: 108%;
     letter-spacing: -0.03em;
-    font-size: clamp(1.15rem, 2.2vw, 1.65rem);
-    margin-top: 0.85rem;
+    font-size: clamp(1.05rem, 2.4vw, 1.55rem);
+    font-size: clamp(1.05rem, 4.8cqi, 1.55rem);
+    line-height: 1.25;
+    max-width: 100%;
+    margin-top: 0.7rem;
+    text-wrap: balance;
 }
 
 .modo-claro .rol-principal {
