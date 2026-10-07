@@ -215,6 +215,12 @@
     font-size: clamp(1.55rem, 6.4cqi, 3.35rem);
 }
 
+@media (min-width: 992px) {
+    .hero-texto ::ng-deep .medida {
+        font-size: clamp(1.55rem, 8cqi, 3.75rem);
+    }
+}
+
 .marco-foto {
     position: relative;
     width: min(100%, 16.5rem);
